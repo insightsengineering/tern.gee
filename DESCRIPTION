@@ -1,7 +1,7 @@
 Type: Package
 Package: tern.gee
 Title: TLGs using Generalized Estimating Equations (GEE)
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Date: 2022-08-22
 Authors@R:
     person("insightsengineering", , , "insightsengineering@example.com", role = c("aut", "cre"))
