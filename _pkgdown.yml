@@ -7,3 +7,15 @@ navbar:
   right:
     - icon: fa-github
       href: https://github.com/insightsengineering/tern.gee
+
+reference:
+  - title: Analysis Helper Functions
+    desc: these functions are useful to help definining the analysis
+    contents:
+      - control_gee
+      - vars_gee
+
+  - title: Model Specific Functions
+    desc: these functions help with fitting or extracting results from specific models
+    contents:
+      - fit_gee
