@@ -17,8 +17,7 @@ as.rtable.tern_gee <- function(x, # nolint
                                type = c("coef", "cov"),
                                ...) {
   type <- match.arg(type)
-  switch(
-    type,
+  switch(type,
     coef = h_gee_coef(x, ...),
     cov = h_gee_cov(x, ...)
   )

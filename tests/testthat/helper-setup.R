@@ -8,4 +8,3 @@ fev_vars <- vars_gee(
   id = "USUBJID",
   visit = "AVISIT"
 )
-

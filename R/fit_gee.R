@@ -49,8 +49,7 @@ build_formula <- function(vars) {
 build_family <- function(regression) {
   assert_string(regression)
 
-  result_object <- switch(
-    regression,
+  result_object <- switch(regression,
     logistic = stats::binomial(link = "logit"),
     stop(paste("regression type", regression, "not supported"))
   )
@@ -69,8 +68,7 @@ build_cor_details <- function(cor_str, vars, data) {
   assert_list(vars)
   assert_data_frame(data)
 
-  result_str <- switch(
-    cor_str,
+  result_str <- switch(cor_str,
     "unstructured" = "unstructured",
     "toeplitz" = "stat_M_dep",
     "compound symmetry" = "exchangeable",
@@ -78,8 +76,7 @@ build_cor_details <- function(cor_str, vars, data) {
     stop(paste("correlation structure", cor_str, "not available"))
   )
 
-  result_mv <- switch(
-    cor_str,
+  result_mv <- switch(cor_str,
     "unstructured" = 1,
     "toeplitz" = nlevels(data[[vars$visit]]) - 1,
     "compound symmetry" = 1,
@@ -149,7 +146,7 @@ fit_gee <- function(vars = vars_gee(),
     formula = formula,
     id = .id,
     data = data,
-    na.action = na.omit,  # That is the only option here.
+    na.action = na.omit, # That is the only option here.
     tol = control$tol,
     maxiter = control$maxiter,
     family = family$object,
@@ -170,5 +167,3 @@ fit_gee <- function(vars = vars_gee(),
     class = c(family$class, "tern_gee", class(fit))
   )
 }
-
-
