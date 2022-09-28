@@ -81,7 +81,7 @@ build_cor_details <- function(cor_str, vars, data) {
   result_mv <- switch(
     cor_str,
     "unstructured" = 1,
-    "toeplitz" = nlevels(data[[vars$visit]]),
+    "toeplitz" = nlevels(data[[vars$visit]]) - 1,
     "compound symmetry" = 1,
     "auto-regressive" = 1
   )
@@ -145,7 +145,7 @@ fit_gee <- function(vars = vars_gee(),
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
-  fit <- gee::gee(
+  capture.output(fit <- suppressMessages(gee::gee(
     formula = formula,
     id = .id,
     data = data,
@@ -158,10 +158,17 @@ fit_gee <- function(vars = vars_gee(),
     silent = control$silent,
     scale.fix = control$scale.fix,
     scale.value = control$scale.value
-  )
+  )))
+
+  fit$visit_levels <- levels(data[[vars$visit]])
+  fit$vars <- vars
+  fit$data <- data
+  fit$ref_level <- levels(data[[vars$arm]])[1L]
 
   structure(
     fit,
     class = c(family$class, "tern_gee", class(fit))
   )
 }
+
+
