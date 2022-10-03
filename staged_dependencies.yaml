@@ -6,6 +6,8 @@ current_repo:
 upstream_repos:
   - repo: insightsengineering/nestcolor
     host: https://github.com
+  - repo: Roche/rtables
+    host: https://github.com
   - repo: insightsengineering/tern
     host: https://github.com
 downstream_repos:
