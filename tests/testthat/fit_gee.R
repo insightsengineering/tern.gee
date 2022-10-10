@@ -1,3 +1,11 @@
+# build_formula ----
+
+test_that("build_formula works without covariates", {
+  result <- expect_silent(build_formula(vars_gee()))
+  expected <- AVAL ~ ARM
+  expect_equal(result, expected, ignore_attr = TRUE)
+})
+
 # fit_gee ----
 
 ## logistic ----

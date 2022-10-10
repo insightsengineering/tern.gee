@@ -29,13 +29,9 @@ control_gee <- function(tol = 0.001,
 #' @keywords internal
 build_formula <- function(vars) {
   assert_list(vars)
-  covariates_part <- paste(
-    vars$covariates,
-    collapse = " + "
-  )
   arm_part <- if (is.null(vars$arm)) NULL else vars$arm
   rhs_formula <- paste(
-    c(arm_part, covariates_part),
+    c(arm_part, vars$covariates),
     collapse = " + "
   )
   stats::as.formula(paste(
