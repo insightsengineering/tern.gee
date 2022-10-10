@@ -32,11 +32,14 @@ h_gee_coef <- function(x, format = "xx.xxxx", conf_level = 0.95, ...) {
   fixed_table[["z value"]] <- fixed_table[["Robust z"]]
   fixed_table[["Pr(>|z|)"]] <- 2 * stats::pnorm(abs(fixed_table[["z value"]]), lower.tail = FALSE)
   q <- stats::qnorm((1 + conf_level) / 2)
-  fixed_table[["Lower 95% CI"]] <- fixed_table$Estimate - q * fixed_table[["Std. Error"]]
-  fixed_table[["Upper 95% CI"]] <- fixed_table$Estimate + q * fixed_table[["Std. Error"]]
+  ci_string <- tern::f_conf_level(conf_level)
+  lower_string <- paste("Lower", ci_string)
+  upper_string <- paste("Upper", ci_string)
+  fixed_table[[lower_string]] <- fixed_table$Estimate - q * fixed_table[["Std. Error"]]
+  fixed_table[[paste("Upper", ci_string)]] <- fixed_table$Estimate + q * fixed_table[["Std. Error"]]
 
   est_se_ci_table <- as.rtable(
-    fixed_table[, c("Estimate", "Std. Error", "Lower 95% CI", "Upper 95% CI")],
+    fixed_table[, c("Estimate", "Std. Error", lower_string, upper_string)],
     format = format
   )
   z_table <- as.rtable(fixed_table[, c("z value"), drop = FALSE], format = format)

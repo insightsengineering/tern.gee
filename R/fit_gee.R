@@ -156,6 +156,7 @@ fit_gee <- function(vars = vars_gee(),
   fit$visit_levels <- levels(data[[vars$visit]])
   fit$vars <- vars
   fit$data <- data
+  assert_factor(data[[vars$arm]])
   fit$ref_level <- levels(data[[vars$arm]])[1L]
 
   structure(
