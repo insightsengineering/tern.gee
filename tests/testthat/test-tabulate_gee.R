@@ -7,7 +7,7 @@ model <- fit_gee(
 
 test_that("h_gee_coef works", {
   result <- expect_silent(h_gee_coef(model))
-  # to do: add expectation
+
 })
 
 test_that("h_gee_cov works", {

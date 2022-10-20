@@ -12,20 +12,6 @@ vars_gee <- function(response = "AVAL",
   )
 }
 
-control_gee <- function(tol = 0.001,
-                        maxiter = 25,
-                        silent = TRUE,
-                        scale.fix = TRUE,
-                        scale.value = 1) {
-  list(
-    tol = tol,
-    maxiter = maxiter,
-    silent = silent,
-    scale.fix = scale.fix,
-    scale.value = scale.value
-  )
-}
-
 #' @keywords internal
 build_formula <- function(vars) {
   assert_list(vars)
@@ -66,9 +52,9 @@ build_cor_details <- function(cor_str, vars, data) {
 
   result_str <- switch(cor_str,
     "unstructured" = "unstructured",
-    "toeplitz" = "stat_M_dep",
+    "toeplitz" = "m-dependent",
     "compound symmetry" = "exchangeable",
-    "auto-regressive" = "AR-M",
+    "auto-regressive" = "ar1",
     stop(paste("correlation structure", cor_str, "not available"))
   )
 
@@ -126,7 +112,7 @@ fit_gee <- function(vars = vars_gee(),
                     data,
                     regression = c("logistic"),
                     cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive"),
-                    control = control_gee()) {
+                    control = geeasy::geelm.control()) {
   formula <- build_formula(vars)
 
   regression <- match.arg(regression)
@@ -134,24 +120,21 @@ fit_gee <- function(vars = vars_gee(),
 
   data <- order_data(data, vars)
   data[[".id"]] <- data[[vars$id]]
+  data[[".waves"]] <- as.integer(data[[vars$visit]])
 
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
-  capture.output(fit <- suppressMessages(gee::gee(
+  fit <- geeasy::geelm(
     formula = formula,
     id = .id,
+    waves = .waves,
     data = data,
-    na.action = na.omit, # That is the only option here.
-    tol = control$tol,
-    maxiter = control$maxiter,
     family = family$object,
     corstr = cor_details$str,
     Mv = cor_details$mv,
-    silent = control$silent,
-    scale.fix = control$scale.fix,
-    scale.value = control$scale.value
-  )))
+    control = control
+  )
 
   fit$visit_levels <- levels(data[[vars$visit]])
   fit$vars <- vars
