@@ -2,12 +2,9 @@
 % Please edit documentation in R/gee_methods.R
 \name{gee_methods}
 \alias{gee_methods}
-\alias{vcov.gee}
 \alias{VarCorr.tern_gee}
 \title{Method for GEE Models}
 \usage{
-\method{vcov}{gee}(object, ...)
-
 \method{VarCorr}{tern_gee}(x, sigma = x$scale, ...)
 }
 \description{

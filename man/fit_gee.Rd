@@ -9,7 +9,7 @@ fit_gee(
   data,
   regression = c("logistic"),
   cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive"),
-  control = control_gee()
+  control = geeasy::geelm.control()
 )
 }
 \arguments{
