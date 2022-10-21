@@ -3,9 +3,12 @@
 \name{gee_methods}
 \alias{gee_methods}
 \alias{VarCorr.tern_gee}
+\alias{QIC.tern_gee}
 \title{Method for GEE Models}
 \usage{
 \method{VarCorr}{tern_gee}(x, sigma = 1, ...)
+
+\method{QIC}{tern_gee}(object, ...)
 }
 \description{
 Additional methods which can simplify working with the GEE result object.

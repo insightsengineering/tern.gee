@@ -18,6 +18,7 @@ Depends:
 Imports:
     checkmate,
     geeasy,
+    geepack,
     nlme,
     rtables,
     stats

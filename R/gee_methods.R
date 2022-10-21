@@ -37,3 +37,10 @@ VarCorr.tern_gee <- function(x, sigma = 1, ...) {
   rownames(mat) <- colnames(mat) <- x$visit_levels
   mat
 }
+
+#' @rdname gee_methods
+#' @importFrom geepack QIC
+#' @exportS3Method
+QIC.tern_gee <- function(object, ...) {
+  object$qic
+}

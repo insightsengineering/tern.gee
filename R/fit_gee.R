@@ -40,7 +40,8 @@ build_family <- function(regression) {
 
   list(
     object = result_object,
-    class = result_class
+    class = result_class,
+    control = geeasy::geelm.control(scale.fix = TRUE)
   )
 }
 
@@ -96,7 +97,6 @@ order_data <- function(data, vars) {
 #' @param data (`data.frame`)\cr input data.
 #' @param regression (`string`)\cr choice of regression model.
 #' @param cor_struct (`string`)\cr assumed correlation structure.
-#' @param control (`list`)\cr see [control_gee()].
 #'
 #' @details The correlation structure can be:
 #' * `unstructured`: No constraints are placed on the correlations.
@@ -111,8 +111,7 @@ order_data <- function(data, vars) {
 fit_gee <- function(vars = vars_gee(),
                     data,
                     regression = c("logistic"),
-                    cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive"),
-                    control = geeasy::geelm.control()) {
+                    cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive")) {
   formula <- build_formula(vars)
 
   regression <- match.arg(regression)
@@ -125,6 +124,7 @@ fit_gee <- function(vars = vars_gee(),
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
+  browser()
   fit <- geeasy::geelm(
     formula = formula,
     id = .id,
@@ -133,9 +133,10 @@ fit_gee <- function(vars = vars_gee(),
     family = family$object,
     corstr = cor_details$str,
     Mv = cor_details$mv,
-    control = control
+    control = family$control
   )
 
+  fit$qic <- geepack::QIC(fit)
   fit$visit_levels <- levels(data[[vars$visit]])
   fit$vars <- vars
   fit$data <- data
