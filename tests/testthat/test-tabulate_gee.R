@@ -28,5 +28,3 @@ test_that("summarize_gee_logistic works", {
     )
   # to do: add expectation
 })
-
-
