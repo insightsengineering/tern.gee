@@ -1,4 +1,3 @@
-# tern.gee 0.0.0.9001
-### New features
+# tern.gee 0.0.9001
 
-* New package
+* First release of the `tern.gee` package.

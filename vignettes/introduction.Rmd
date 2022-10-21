@@ -1,0 +1,10 @@
+---
+title: "Introduction to `tern.gee`"
+date: "`r Sys.Date()`"
+---
+
+Placeholder for introduction vignette.
+
+```{r}
+library(tern.gee)
+```
