@@ -13,8 +13,7 @@ VarCorr.tern_gee <- function(x, sigma = 1, ...) {
   corest <- x$geese$alpha
 
   # Start with lower-triangular matrix part.
-  lower_mat <- switch(
-    x$corstr,
+  lower_mat <- switch(x$corstr,
     unstructured = , # Since this is the same as exchangeable, we can do this.
     exchangeable = {
       tmp[lower.tri(tmp)] <- corest
