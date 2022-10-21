@@ -8,8 +8,7 @@ fit_gee(
   vars = vars_gee(),
   data,
   regression = c("logistic"),
-  cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive"),
-  control = geeasy::geelm.control()
+  cor_struct = c("unstructured", "toeplitz", "compound symmetry", "auto-regressive")
 )
 }
 \arguments{
@@ -20,8 +19,6 @@ fit_gee(
 \item{regression}{(\code{string})\cr choice of regression model.}
 
 \item{cor_struct}{(\code{string})\cr assumed correlation structure.}
-
-\item{control}{(\code{list})\cr see \code{\link[=control_gee]{control_gee()}}.}
 }
 \value{
 Object of class \code{tern_gee} as well as specific to the kind of regression
