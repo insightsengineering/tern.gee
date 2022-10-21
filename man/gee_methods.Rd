@@ -5,7 +5,7 @@
 \alias{VarCorr.tern_gee}
 \title{Method for GEE Models}
 \usage{
-\method{VarCorr}{tern_gee}(x, sigma = x$scale, ...)
+\method{VarCorr}{tern_gee}(x, sigma = 1, ...)
 }
 \description{
 Additional methods which can simplify working with the GEE result object.
