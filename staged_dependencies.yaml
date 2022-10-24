@@ -4,10 +4,16 @@ current_repo:
   repo: insightsengineering/tern.gee
   host: https://github.com
 upstream_repos:
-  - repo: insightsengineering/nestcolor
+  insightsengineering/nestcolor:
+    repo: insightsengineering/nestcolor
     host: https://github.com
-  - repo: Roche/rtables
+  insightsengineering/formatters:
+    repo: insightsengineering/formatters
     host: https://github.com
-  - repo: insightsengineering/tern
+  Roche/rtables:
+    repo: Roche/rtables
+    host: https://github.com
+  insightsengineering/tern:
+    repo: insightsengineering/tern
     host: https://github.com
 downstream_repos:

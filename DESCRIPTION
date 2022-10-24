@@ -17,6 +17,7 @@ Depends:
     nestcolor (>= 0.0.1)
 Imports:
     checkmate,
+    formatters,
     geeasy,
     geepack,
     nlme,
