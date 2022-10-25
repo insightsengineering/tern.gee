@@ -4,4 +4,13 @@ current_repo:
   repo: insightsengineering/tern.gee
   host: https://github.com
 upstream_repos:
+  insightsengineering/formatters:
+    repo: insightsengineering/formatters
+    host: https://github.com
+  Roche/rtables:
+    repo: Roche/rtables
+    host: https://github.com
+  insightsengineering/tern:
+    repo: insightsengineering/tern
+    host: https://github.com
 downstream_repos:
