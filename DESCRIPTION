@@ -25,6 +25,8 @@ Suggests:
 VignetteBuilder:
     knitr
 Config/testthat/edition: 3
+Remotes:
+    insightsengineering/tern@*release
 Encoding: UTF-8
 Language: en-US
 LazyData: true
