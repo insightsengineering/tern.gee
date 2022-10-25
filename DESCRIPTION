@@ -1,7 +1,7 @@
 Type: Package
 Package: tern.gee
 Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits
-Version: 0.0.9001
+Version: 0.0.0.9001
 Date: 2022-10-03
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
