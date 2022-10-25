@@ -1,8 +1,9 @@
 Type: Package
 Package: tern.gee
-Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits
-Version: 0.0.0.9001
-Date: 2022-10-03
+Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model
+    Fits
+Version: 0.0.0.9002
+Date: 2022-10-25
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
@@ -24,9 +25,9 @@ Suggests:
     vdiffr
 VignetteBuilder:
     knitr
-Config/testthat/edition: 3
 Remotes:
     insightsengineering/tern@*release
+Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true
