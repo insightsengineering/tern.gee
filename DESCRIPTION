@@ -16,6 +16,12 @@ Depends:
     R (>= 4.0),
     tern (>= 0.7.9)
 Imports:
+    checkmate,
+    geeasy,
+    geepack,
+    nlme,
+    rtables,
+    stats,
     formatters,
     rtables
 Suggests:
