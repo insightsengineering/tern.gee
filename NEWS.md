@@ -1,4 +1,6 @@
 # tern.gee 0.0.0.9002
-### New features
 
-* New package
+### Miscellaneous
+
+* Initialize the package.
+* Update pkgdown site.
