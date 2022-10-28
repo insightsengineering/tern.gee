@@ -16,9 +16,10 @@ test_that("build_formula works without covariates", {
 # build_family ----
 
 test_that("build_family returns the correct class", {
-  result <- as.character(build_family("logistic"))[2]
+  result <- build_family("logistic")
   expected <- "tern_gee_logistic"
-  expect_identical(result, expected)
+  expect_identical(result$class, expected)
+  expect_class(result$object, "family")
 })
 
 test_that("build_family gives error message if incorrect regression type is given", {
@@ -41,7 +42,7 @@ test_that("build_cor_details gives error message if incorrect correlation struct
 
 ## logistic ----
 
-test_that("unstructured", {
+test_that("fit_gee works as expected for unstructured correlation structure", {
   result <- expect_silent(fit_gee(
     vars = fev_vars,
     data = fev_data,
@@ -51,7 +52,7 @@ test_that("unstructured", {
   expect_class(result, c("tern_gee_logistic", "tern_gee", "geelm"))
 })
 
-test_that("auto-regressive", {
+test_that("fit_gee works as expected for AR1 correlation structure", {
   result <- expect_silent(fit_gee(
     vars = fev_vars,
     data = fev_data,
@@ -61,7 +62,7 @@ test_that("auto-regressive", {
   expect_class(result, c("tern_gee_logistic", "tern_gee", "geelm"))
 })
 
-test_that("compound symmetry", {
+test_that("fit_gee works as expected for compound symmetry correlation structure", {
   result <- expect_silent(fit_gee(
     vars = fev_vars,
     data = fev_data,
@@ -71,7 +72,7 @@ test_that("compound symmetry", {
   expect_class(result, c("tern_gee_logistic", "tern_gee", "geelm"))
 })
 
-test_that("toeplitz", {
+test_that("fit_gee works as expected for Toeplitz correlation structure", {
   result <- expect_silent(fit_gee(
     vars = fev_vars,
     data = fev_data,
