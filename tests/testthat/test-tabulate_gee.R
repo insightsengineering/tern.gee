@@ -71,7 +71,7 @@ test_that("s_mmrm_lsmeans works as expected when in reference column", {
   expect_equal(result, expected, tolerance = 1e-2)
 })
 
-test_that("summarize_gee_logistic works", {
+test_that("summarize_gee_logistic works as expected with covariates in the model", {
   result <- basic_table() %>%
     split_cols_by("ARMCD", ref_group = model$ref_level) %>%
     add_colcounts() %>%
@@ -93,7 +93,7 @@ test_that("summarize_gee_logistic works", {
   expect_identical(result_matrix, expected_matrix)
 })
 
-test_that("summarize_logistic works as expected with no covariates in the model", {
+test_that("summarize_gee_logistic works as expected with no covariates in the model", {
   fev_vars_nocov <- vars_gee(
     response = "FEV1_BINARY",
     arm = "ARMCD",
