@@ -108,6 +108,14 @@ order_data <- function(data, vars) {
 #' @return Object of class `tern_gee` as well as specific to the kind of regression
 #'   which was used.
 #' @export
+#'
+#' @examples
+#' df <- fev_data
+#' df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+#'
+#' fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
+#'
+#' fit_gee(vars = vars_gee(arm = "ARMCD"), data = df, cor_struct = "compound symmetry")
 fit_gee <- function(vars = vars_gee(),
                     data,
                     regression = c("logistic"),
@@ -124,7 +132,6 @@ fit_gee <- function(vars = vars_gee(),
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
-  browser()
   fit <- geeasy::geelm(
     formula = formula,
     id = .id,

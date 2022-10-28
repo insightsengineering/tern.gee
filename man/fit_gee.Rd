@@ -37,3 +37,11 @@ between two time points depends on the distance between the time indices.
 \item \code{auto-regressive}: Auto-regressive order 1 correlation matrix.
 }
 }
+\examples{
+df <- fev_data
+df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+
+fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
+
+fit_gee(vars = vars_gee(arm = "ARMCD"), data = df, cor_struct = "compound symmetry")
+}

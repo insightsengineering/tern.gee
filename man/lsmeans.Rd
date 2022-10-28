@@ -24,3 +24,12 @@ classes allow to dispatch downstream methods correctly, too.
 \description{
 Extract Least Square Means from a GEE Model
 }
+\examples{
+df <- fev_data
+df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+fit <- fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
+
+lsmeans(fit)
+
+lsmeans(fit, conf_level = 0.90, weights = "equal")
+}

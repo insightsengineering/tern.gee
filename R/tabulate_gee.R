@@ -1,9 +1,9 @@
 #' Tabulation of a GEE Model
 #'
-#' These functions can be used to produce tables from a fitted  GEE produced with
-#' [fit_gee()].
+#' These functions can be used to produce tables from a fitted GEE produced with [fit_gee()].
 #'
 #' @name tabulate_gee
+#' @noRd
 NULL
 
 #' @importFrom tern as.rtable
@@ -11,8 +11,8 @@ NULL
 tern::as.rtable
 
 #' @exportS3Method
-#' @describeIn tabulate_gee extracts the coefficient table or covariance matrix
-#' estimate from a `tern_gee` object.
+#'
+#' @title Extract the coefficient table or covariance matrix estimate from a `tern_gee` object.
 as.rtable.tern_gee <- function(x, # nolint
                                type = c("coef", "cov"),
                                ...) {
@@ -56,11 +56,23 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 
 # lsmeans_logistic ----
 
-#' @describeIn tabulate_gee Statistics function which is extracting estimates from a
-#'   [lsmeans()] data frame based on a logistic GEE model.
-#' @param df (`data.frame`)\cr data set being a result from [lsmeans()].
+#' Extract Logistic GEE Model LS Means Estimates
+#'
+#' Statistics function which extracts estimates from a [lsmeans()] data frame based on a logistic GEE model.
+#'
+#' @param df (`data.frame`)\cr data set resulting from [lsmeans()].
 #' @param .in_ref_col (`logical`)\cr `TRUE` when working with the reference level, `FALSE` otherwise.
+#'
 #' @export
+#'
+#' @examples
+#' df <- fev_data
+#' df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+#' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
+#'
+#' s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
+#'
+#' s_lsmeans_logistic(lsmeans_df[2,], .in_ref_col = FALSE)
 s_lsmeans_logistic <- function(df, .in_ref_col) {
   if_not_ref <- function(x) `if`(.in_ref_col, character(), x)
   list(
@@ -82,10 +94,12 @@ s_lsmeans_logistic <- function(df, .in_ref_col) {
 
 ## a_lsmeans_logistic ----
 
-#' @describeIn tabulate_gee Formatted Analysis function which can be further customized by calling
-#'   [rtables::make_afun()] on it. It is used as `afun` in [rtables::analyze()].
-#' @export
+#' Extract Logistic GEE Model LS Means Estimates
 #'
+#' Formatted Analysis function which can be further customized by calling
+#'   [rtables::make_afun()] on it. It is used as `afun` in [rtables::analyze()].
+#'
+#' @export
 a_lsmeans_logistic <- make_afun(
   s_lsmeans_logistic,
   .labels = c(
@@ -114,8 +128,10 @@ a_lsmeans_logistic <- make_afun(
 # class of the lsmeans input, however for now in the prototype we keep it simple.
 # see later then to tern::summarize_variables for how to do that.
 
-#' @describeIn tabulate_gee Analyze function for tabulating least-squares means estimates
-#'   from logistic GEE least square mean results.
+#' Summarize Logistic GEE Least Square Mean Results
+#'
+#' Analyze function for tabulating least-squares means estimates from logistic GEE least square mean results.
+#'
 #' @param lyt (`layout`)\cr input layout where analyses will be added to.
 #' @param table_names (`character`)\cr this can be customized in case that the same `vars`
 #'   are analyzed multiple times, to avoid warnings from `rtables`.
@@ -123,7 +139,26 @@ a_lsmeans_logistic <- make_afun(
 #' @param .formats (named `character` or `list`)\cr formats for the statistics.
 #' @param .indent_mods (named `integer`)\cr indent modifiers for the labels.
 #' @param .labels (named `character`)\cr labels for the statistics (without indent).
+#'
 #' @export
+#'
+#' @examples
+#' library(dplyr)
+#'
+#' df <- fev_data %>%
+#'   mutate(AVAL = rbinom(n = nrow(df), size = 1, prob = 0.5))
+#'   df_all <- df %>%
+#'     select(USUBJID, ARMCD) %>%
+#'       unique()
+#'
+#' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
+#' basic_table() %>%
+#'   split_cols_by("ARMCD") %>%
+#'   add_colcounts() %>%
+#'   summarize_gee_logistic(
+#'     .in_ref_col = FALSE
+#'   ) %>%
+#'   build_table(lsmeans_df, alt_counts_df = df_all)
 summarize_gee_logistic <- function(lyt,
                                    ...,
                                    table_names = "lsmeans_logistic_summary",
