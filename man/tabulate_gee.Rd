@@ -49,7 +49,7 @@ Functions to produce tables from a fitted GEE produced with \code{\link[=fit_gee
 \itemize{
 \item \code{as.rtable(tern_gee)}: Extracts the coefficient table or covariance matrix estimate from a \code{tern_gee} object.
 
-\item \code{s_lsmeans_logistic()}: Statistics function which is extracting estimates from a
+\item \code{s_lsmeans_logistic()}: Statistics function which extracts estimates from a
 \code{\link[=lsmeans]{lsmeans()}} data frame based on a logistic GEE model.
 
 \item \code{a_lsmeans_logistic()}: Formatted Analysis function which can be further customized by calling

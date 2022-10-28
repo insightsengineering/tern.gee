@@ -54,7 +54,7 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 
 # lsmeans_logistic ----
 
-#' @describeIn tabulate_gee Statistics function which is extracting estimates from a
+#' @describeIn tabulate_gee Statistics function which extracts estimates from a
 #'   [lsmeans()] data frame based on a logistic GEE model.
 #'
 #' @param df (`data.frame`)\cr data set resulting from [lsmeans()].
