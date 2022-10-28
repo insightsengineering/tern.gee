@@ -124,7 +124,6 @@ fit_gee <- function(vars = vars_gee(),
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
-  browser()
   fit <- geeasy::geelm(
     formula = formula,
     id = .id,
