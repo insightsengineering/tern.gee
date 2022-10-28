@@ -4,3 +4,4 @@
 
 * Initialize the package.
 * Update pkgdown site.
+* Add examples for `fit_gee`, `lsmeans`, `s_lsmeans_logistic`, `summarize_gee_logistic`.

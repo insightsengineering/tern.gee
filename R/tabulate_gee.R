@@ -1,9 +1,8 @@
 #' Tabulation of a GEE Model
 #'
-#' These functions can be used to produce tables from a fitted GEE produced with [fit_gee()].
+#' Functions to produce tables from a fitted GEE produced with [fit_gee()].
 #'
 #' @name tabulate_gee
-#' @noRd
 NULL
 
 #' @importFrom tern as.rtable
@@ -11,8 +10,7 @@ NULL
 tern::as.rtable
 
 #' @exportS3Method
-#'
-#' @title Extract the coefficient table or covariance matrix estimate from a `tern_gee` object.
+#' @describeIn tabulate_gee Extracts the coefficient table or covariance matrix estimate from a `tern_gee` object.
 as.rtable.tern_gee <- function(x, # nolint
                                type = c("coef", "cov"),
                                ...) {
@@ -56,9 +54,8 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 
 # lsmeans_logistic ----
 
-#' Extract Logistic GEE Model LS Means Estimates
-#'
-#' Statistics function which extracts estimates from a [lsmeans()] data frame based on a logistic GEE model.
+#' @describeIn tabulate_gee Statistics function which is extracting estimates from a
+#'   [lsmeans()] data frame based on a logistic GEE model.
 #'
 #' @param df (`data.frame`)\cr data set resulting from [lsmeans()].
 #' @param .in_ref_col (`logical`)\cr `TRUE` when working with the reference level, `FALSE` otherwise.
@@ -94,9 +91,7 @@ s_lsmeans_logistic <- function(df, .in_ref_col) {
 
 ## a_lsmeans_logistic ----
 
-#' Extract Logistic GEE Model LS Means Estimates
-#'
-#' Formatted Analysis function which can be further customized by calling
+#' @describeIn tabulate_gee Formatted Analysis function which can be further customized by calling
 #'   [rtables::make_afun()] on it. It is used as `afun` in [rtables::analyze()].
 #'
 #' @export
@@ -128,9 +123,8 @@ a_lsmeans_logistic <- make_afun(
 # class of the lsmeans input, however for now in the prototype we keep it simple.
 # see later then to tern::summarize_variables for how to do that.
 
-#' Summarize Logistic GEE Least Square Mean Results
-#'
-#' Analyze function for tabulating least-squares means estimates from logistic GEE least square mean results.
+#' @describeIn tabulate_gee Analyze function for tabulating least-squares means estimates
+#'   from logistic GEE least square mean results.
 #'
 #' @param lyt (`layout`)\cr input layout where analyses will be added to.
 #' @param table_names (`character`)\cr this can be customized in case that the same `vars`
