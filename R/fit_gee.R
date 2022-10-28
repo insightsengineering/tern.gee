@@ -111,7 +111,7 @@ order_data <- function(data, vars) {
 #'
 #' @examples
 #' df <- fev_data
-#' df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+#' df$AVAL <- as.integer(fev_data$FEV1 > 30)
 #'
 #' fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
 #'

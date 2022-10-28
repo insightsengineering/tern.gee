@@ -63,8 +63,14 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 #' @export
 #'
 #' @examples
-#' df <- fev_data
-#' df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+#' library(dplyr)
+#'
+#' df <- fev_data %>%
+#'   mutate(AVAL = as.integer(fev_data$FEV1 > 30))
+#' df_counts <- df %>%
+#'   select(USUBJID, ARMCD) %>%
+#'   unique()
+#'
 #' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
 #'
 #' s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
@@ -137,22 +143,13 @@ a_lsmeans_logistic <- make_afun(
 #' @export
 #'
 #' @examples
-#' library(dplyr)
-#'
-#' df <- fev_data %>%
-#'   mutate(AVAL = rbinom(n = nrow(df), size = 1, prob = 0.5))
-#'   df_all <- df %>%
-#'     select(USUBJID, ARMCD) %>%
-#'       unique()
-#'
-#' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
 #' basic_table() %>%
 #'   split_cols_by("ARMCD") %>%
 #'   add_colcounts() %>%
 #'   summarize_gee_logistic(
 #'     .in_ref_col = FALSE
 #'   ) %>%
-#'   build_table(lsmeans_df, alt_counts_df = df_all)
+#'   build_table(lsmeans_df, alt_counts_df = df_counts)
 summarize_gee_logistic <- function(lyt,
                                    ...,
                                    table_names = "lsmeans_logistic_summary",
