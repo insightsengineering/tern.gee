@@ -9,13 +9,22 @@ navbar:
       href: https://github.com/insightsengineering/tern.gee
 
 reference:
-  - title: Analysis Helper Functions
-    desc: these functions are useful to help definining the analysis
+  - title: Overview Pages
     contents:
-      - control_gee
-      - vars_gee
+      - tern.gee-package
+
+  - title: Helper Methods
+    contents:
+      - gee_methods
 
   - title: Model Specific Functions
-    desc: these functions help with fitting or extracting results from specific models
+    desc: These functions help with fitting or extracting results from specific models.
     contents:
+      - as.rtable.tern_gee
       - fit_gee
+      - lsmeans
+      - tabulate_gee
+
+  - title: Example Data
+    contents:
+      - fev_data
