@@ -3,4 +3,4 @@
 ### Miscellaneous
 
 * Initialize the package.
-* Update pkgdown site.
+* Update README, pkgdown site.
