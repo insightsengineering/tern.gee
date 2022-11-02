@@ -4,7 +4,7 @@
 \alias{gee_methods}
 \alias{VarCorr.tern_gee}
 \alias{QIC.tern_gee}
-\title{Method for GEE Models}
+\title{Methods for GEE Models}
 \usage{
 \method{VarCorr}{tern_gee}(x, sigma = 1, ...)
 

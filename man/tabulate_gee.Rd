@@ -25,7 +25,7 @@ summarize_gee_logistic(
 )
 }
 \arguments{
-\item{df}{(\code{data.frame})\cr data set being a result from \code{\link[=lsmeans]{lsmeans()}}.}
+\item{df}{(\code{data.frame})\cr data set resulting from \code{\link[=lsmeans]{lsmeans()}}.}
 
 \item{.in_ref_col}{(\code{logical})\cr \code{TRUE} when working with the reference level, \code{FALSE} otherwise.}
 
@@ -43,15 +43,13 @@ are analyzed multiple times, to avoid warnings from \code{rtables}.}
 \item{.labels}{(named \code{character})\cr labels for the statistics (without indent).}
 }
 \description{
-These functions can be used to produce tables from a fitted  GEE produced with
-\code{\link[=fit_gee]{fit_gee()}}.
+Functions to produce tables from a fitted GEE produced with \code{\link[=fit_gee]{fit_gee()}}.
 }
 \section{Functions}{
 \itemize{
-\item \code{as.rtable(tern_gee)}: extracts the coefficient table or covariance matrix
-estimate from a \code{tern_gee} object.
+\item \code{as.rtable(tern_gee)}: Extracts the coefficient table or covariance matrix estimate from a \code{tern_gee} object.
 
-\item \code{s_lsmeans_logistic()}: Statistics function which is extracting estimates from a
+\item \code{s_lsmeans_logistic()}: Statistics function which extracts estimates from a
 \code{\link[=lsmeans]{lsmeans()}} data frame based on a logistic GEE model.
 
 \item \code{a_lsmeans_logistic()}: Formatted Analysis function which can be further customized by calling
@@ -61,3 +59,25 @@ estimate from a \code{tern_gee} object.
 from logistic GEE least square mean results.
 
 }}
+\examples{
+library(dplyr)
+
+df <- fev_data \%>\%
+  mutate(AVAL = as.integer(fev_data$FEV1 > 30))
+df_counts <- df \%>\%
+  select(USUBJID, ARMCD) \%>\%
+  unique()
+
+lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
+
+s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
+
+s_lsmeans_logistic(lsmeans_df[2,], .in_ref_col = FALSE)
+basic_table() \%>\%
+  split_cols_by("ARMCD") \%>\%
+  add_colcounts() \%>\%
+  summarize_gee_logistic(
+    .in_ref_col = FALSE
+  ) \%>\%
+  build_table(lsmeans_df, alt_counts_df = df_counts)
+}

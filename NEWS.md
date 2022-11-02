@@ -3,5 +3,5 @@
 ### Miscellaneous
 
 * Initialize the package.
-* Update pkgdown site.
-* Add unit tests.
+* Update pkgdown site, add unit tests.
+* Add examples for `fit_gee`, `lsmeans`, `s_lsmeans_logistic`, `summarize_gee_logistic`.

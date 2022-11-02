@@ -4,10 +4,19 @@
 #' @param conf_level (`proportion`)\cr confidence level
 #' @param weights (`string`)\cr type of weights to be used for the least square means,
 #'   see [emmeans::emmeans()] for details.
+#'
 #' @return A `data.frame` with least-square means and contrasts. Additional
 #'   classes allow to dispatch downstream methods correctly, too.
-#'
 #' @export
+#'
+#' @examples
+#' df <- fev_data
+#' df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
+#' fit <- fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
+#'
+#' lsmeans(fit)
+#'
+#' lsmeans(fit, conf_level = 0.90, weights = "equal")
 lsmeans <- function(object,
                     conf_level = 0.95,
                     weights = "proportional",
