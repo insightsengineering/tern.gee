@@ -4,3 +4,4 @@
 
 * Initialize the package.
 * Update pkgdown site.
+* Add unit tests.
