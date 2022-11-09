@@ -1,7 +1,6 @@
 #' Tabulation of a GEE Model
 #'
-#' These functions can be used to produce tables from a fitted  GEE produced with
-#' [fit_gee()].
+#' Functions to produce tables from a fitted GEE produced with [fit_gee()].
 #'
 #' @name tabulate_gee
 NULL
@@ -11,8 +10,7 @@ NULL
 tern::as.rtable
 
 #' @exportS3Method
-#' @describeIn tabulate_gee extracts the coefficient table or covariance matrix
-#' estimate from a `tern_gee` object.
+#' @describeIn tabulate_gee Extracts the coefficient table or covariance matrix estimate from a `tern_gee` object.
 as.rtable.tern_gee <- function(x, # nolint
                                type = c("coef", "cov"),
                                ...) {
@@ -56,11 +54,28 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 
 # lsmeans_logistic ----
 
-#' @describeIn tabulate_gee Statistics function which is extracting estimates from a
+#' @describeIn tabulate_gee Statistics function which extracts estimates from a
 #'   [lsmeans()] data frame based on a logistic GEE model.
-#' @param df (`data.frame`)\cr data set being a result from [lsmeans()].
+#'
+#' @param df (`data.frame`)\cr data set resulting from [lsmeans()].
 #' @param .in_ref_col (`logical`)\cr `TRUE` when working with the reference level, `FALSE` otherwise.
+#'
 #' @export
+#'
+#' @examples
+#' library(dplyr)
+#'
+#' df <- fev_data %>%
+#'   mutate(AVAL = as.integer(fev_data$FEV1 > 30))
+#' df_counts <- df %>%
+#'   select(USUBJID, ARMCD) %>%
+#'   unique()
+#'
+#' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
+#'
+#' s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
+#'
+#' s_lsmeans_logistic(lsmeans_df[2,], .in_ref_col = FALSE)
 s_lsmeans_logistic <- function(df, .in_ref_col) {
   if_not_ref <- function(x) `if`(.in_ref_col, character(), x)
   list(
@@ -84,8 +99,8 @@ s_lsmeans_logistic <- function(df, .in_ref_col) {
 
 #' @describeIn tabulate_gee Formatted Analysis function which can be further customized by calling
 #'   [rtables::make_afun()] on it. It is used as `afun` in [rtables::analyze()].
-#' @export
 #'
+#' @export
 a_lsmeans_logistic <- make_afun(
   s_lsmeans_logistic,
   .labels = c(
@@ -116,6 +131,7 @@ a_lsmeans_logistic <- make_afun(
 
 #' @describeIn tabulate_gee Analyze function for tabulating least-squares means estimates
 #'   from logistic GEE least square mean results.
+#'
 #' @param lyt (`layout`)\cr input layout where analyses will be added to.
 #' @param table_names (`character`)\cr this can be customized in case that the same `vars`
 #'   are analyzed multiple times, to avoid warnings from `rtables`.
@@ -123,7 +139,17 @@ a_lsmeans_logistic <- make_afun(
 #' @param .formats (named `character` or `list`)\cr formats for the statistics.
 #' @param .indent_mods (named `integer`)\cr indent modifiers for the labels.
 #' @param .labels (named `character`)\cr labels for the statistics (without indent).
+#'
 #' @export
+#'
+#' @examples
+#' basic_table() %>%
+#'   split_cols_by("ARMCD") %>%
+#'   add_colcounts() %>%
+#'   summarize_gee_logistic(
+#'     .in_ref_col = FALSE
+#'   ) %>%
+#'   build_table(lsmeans_df, alt_counts_df = df_counts)
 summarize_gee_logistic <- function(lyt,
                                    ...,
                                    table_names = "lsmeans_logistic_summary",

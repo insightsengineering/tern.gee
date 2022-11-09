@@ -1,4 +1,4 @@
-#' Method for GEE Models
+#' Methods for GEE Models
 #'
 #' Additional methods which can simplify working with the GEE result object.
 #' @name gee_methods
