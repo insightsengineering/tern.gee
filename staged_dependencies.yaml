@@ -14,3 +14,6 @@ upstream_repos:
     repo: insightsengineering/tern
     host: https://github.com
 downstream_repos:
+  insightsengineering/teal.modules.clinical:
+    repo: insightsengineering/teal.modules.clinical
+    host: https://github.com
