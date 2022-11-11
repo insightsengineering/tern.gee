@@ -1,3 +1,4 @@
+#' @export
 vars_gee <- function(response = "AVAL",
                      covariates = c(),
                      id = "USUBJID",
