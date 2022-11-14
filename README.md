@@ -44,11 +44,15 @@ A stable release of all `NEST` packages is also available [here](https://github.
 You can get started by trying out the example:
 
 ```r
+library(dplyr)
 library(tern.gee)
 
 fev_data$FEV1_BINARY <- as.integer(fev_data$FEV1 > 30)
+fev_counts <- fev_data %>%
+  select(USUBJID, ARMCD) %>%
+  unique()
 
-fit <- fit_gee(
+gee_fit <- fit_gee(
   vars = list(
     response = "FEV1_BINARY",
     covariates = c("RACE", "SEX"),
@@ -58,6 +62,16 @@ fit <- fit_gee(
   ),
   data = fev_data
 )
+
+lsmeans_df <- lsmeans(gee_fit, data = fev_data)
+
+basic_table() %>%
+  split_cols_by("ARMCD") %>%
+  add_colcounts() %>%
+  summarize_gee_logistic(
+    .in_ref_col = FALSE
+  ) %>%
+  build_table(lsmeans_df, alt_counts_df = fev_counts)
 ```
 
 This specifies a GEE with the `FEV1_BINARY` outcome and the `RACE` and `SEX` covariates for 
