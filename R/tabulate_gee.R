@@ -73,9 +73,9 @@ h_gee_cov <- function(x, format = "xx.xxxx") {
 #'
 #' lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
 #'
-#' s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
+#' s_lsmeans_logistic(lsmeans_df[1, ], .in_ref_col = TRUE)
 #'
-#' s_lsmeans_logistic(lsmeans_df[2,], .in_ref_col = FALSE)
+#' s_lsmeans_logistic(lsmeans_df[2, ], .in_ref_col = FALSE)
 s_lsmeans_logistic <- function(df, .in_ref_col) {
   if_not_ref <- function(x) `if`(.in_ref_col, character(), x)
   list(
