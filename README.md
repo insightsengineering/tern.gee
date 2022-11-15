@@ -79,7 +79,7 @@ basic_table() %>%
 
 This specifies a GEE with the `FEV1_BINARY` outcome and the `RACE` and `SEX` covariates for 
 subjects identified by `USUBJID` and treatment arm `ARMCD` observed over time points identified 
-by `AVISIT` in the `fev_data` data set. By deafult, logistic regression is used and an unstructured 
+by `AVISIT` in the `fev_data` data set. By default, logistic regression is used and an unstructured 
 covariance matrix is assumed. The least square means assume equal weights for factor combinations.
 
 ## Stargazers

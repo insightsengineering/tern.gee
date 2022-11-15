@@ -1,3 +1,4 @@
+---
 url: https://insightsengineering.github.io/tern.gee
 
 template:
@@ -18,7 +19,8 @@ reference:
       - gee_methods
 
   - title: Model Specific Functions
-    desc: These functions help with fitting or extracting results from specific models.
+    desc: These functions help with fitting or extracting results from
+          specific models.
     contents:
       - as.rtable.tern_gee
       - fit_gee
