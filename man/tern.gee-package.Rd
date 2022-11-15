@@ -19,6 +19,12 @@ Useful links:
 \author{
 \strong{Maintainer}: Daniel Sabanés Bové \email{daniel.sabanes_bove@roche.com}
 
+Authors:
+\itemize{
+  \item Joe Zhu \email{joe.zhu@roche.com}
+  \item Emily de la Rua \email{emily.de_la_rua@contractors.roche.com}
+}
+
 Other contributors:
 \itemize{
   \item F. Hoffmann-La Roche AG [copyright holder, funder]

@@ -70,9 +70,9 @@ df_counts <- df \%>\%
 
 lsmeans_df <- lsmeans(fit_gee(vars = vars_gee(arm = "ARMCD"), data = df))
 
-s_lsmeans_logistic(lsmeans_df[1,], .in_ref_col = TRUE)
+s_lsmeans_logistic(lsmeans_df[1, ], .in_ref_col = TRUE)
 
-s_lsmeans_logistic(lsmeans_df[2,], .in_ref_col = FALSE)
+s_lsmeans_logistic(lsmeans_df[2, ], .in_ref_col = FALSE)
 basic_table() \%>\%
   split_cols_by("ARMCD") \%>\%
   add_colcounts() \%>\%
