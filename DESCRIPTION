@@ -6,6 +6,8 @@ Version: 0.0.0.9004
 Date: 2022-11-09
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
+    person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut")),
+    person("Emily", "de la Rua", , "emily.de_la_rua@contractors.roche.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
 Description: Create tables and graphs for GEE model fits.
@@ -16,6 +18,12 @@ Depends:
     R (>= 4.0),
     tern (>= 0.7.9)
 Imports:
+    checkmate,
+    geeasy,
+    geepack,
+    nlme,
+    rtables,
+    stats,
     formatters,
     rtables
 Suggests:
