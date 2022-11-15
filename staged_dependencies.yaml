@@ -13,6 +13,9 @@ upstream_repos:
   insightsengineering/tern:
     repo: insightsengineering/tern
     host: https://github.com
+  insightsengineering/nestcolor:
+    repo: insightsengineering/nestcolor
+    host: https://github.com
 downstream_repos:
   insightsengineering/teal.modules.clinical:
     repo: insightsengineering/teal.modules.clinical
