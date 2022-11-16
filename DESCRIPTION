@@ -25,7 +25,8 @@ Imports:
     nlme,
     rtables,
     stats,
-    formatters
+    formatters,
+    emmeans (>= 1.4.5)
 Suggests:
     knitr,
     rmarkdown,
