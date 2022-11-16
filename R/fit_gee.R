@@ -1,4 +1,24 @@
+#' Set Variables to Use in GEE Model
+#'
+#' @param response (`character`)\cr name of response variable.
+#' @param covariates (`character`)\cr vector of names of variables to use as covariates.
+#' @param id (`character`)\cr name of variable to use to identify unique IDs.
+#' @param arm (`character`)\cr name of arm variable.
+#' @param visit (`character`)\cr name of visit variable.
+#'
+#' @return A list of variables that can be used as the `vars` argument in [fit_gee()].
 #' @export
+#'
+#' @examples
+#' vars_gee()
+#'
+#' vars_gee(
+#'   response = "CHG",
+#'   covariates = c("SEX", "RACE"),
+#'   id = "SUBJID",
+#'   arm = "ARMCD",
+#'   visit = "AVISITN"
+#' )
 vars_gee <- function(response = "AVAL",
                      covariates = c(),
                      id = "USUBJID",

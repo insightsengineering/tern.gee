@@ -16,6 +16,8 @@ lsmeans(object, conf_level = 0.95, weights = "proportional", ...)
 
 \item{weights}{(\code{string})\cr type of weights to be used for the least square means,
 see \code{\link[emmeans:emmeans]{emmeans::emmeans()}} for details.}
+
+\item{...}{additional arguments for methods}
 }
 \value{
 A \code{data.frame} with least-square means and contrasts. Additional

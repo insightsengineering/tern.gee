@@ -6,6 +6,7 @@ NULL
 
 #' @rdname gee_methods
 #' @importFrom nlme VarCorr
+#' @inheritParams nlme::VarCorr
 #' @exportS3Method
 VarCorr.tern_gee <- function(x, sigma = 1, ...) { # nolint
   dim_mat <- length(x$visit_levels)
@@ -39,6 +40,7 @@ VarCorr.tern_gee <- function(x, sigma = 1, ...) { # nolint
 
 #' @rdname gee_methods
 #' @importFrom geepack QIC
+#' @inheritParams geepack::QIC
 #' @exportS3Method
 QIC.tern_gee <- function(object, ...) { # nolint
   object$qic

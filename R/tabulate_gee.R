@@ -11,6 +11,8 @@ tern::as.rtable
 
 #' @exportS3Method
 #' @describeIn tabulate_gee Extracts the coefficient table or covariance matrix estimate from a `tern_gee` object.
+#' @inheritParams tern::as.rtable
+#' @param type (`character`)\cr type of table to extract from `tern_gee` object.
 as.rtable.tern_gee <- function(x, # nolint
                                type = c("coef", "cov"),
                                ...) {

@@ -25,6 +25,12 @@ summarize_gee_logistic(
 )
 }
 \arguments{
+\item{x}{the object which should be converted to an \code{rtable}.}
+
+\item{type}{(\code{character})\cr type of table to extract from \code{tern_gee} object.}
+
+\item{...}{additional arguments for methods.}
+
 \item{df}{(\code{data.frame})\cr data set resulting from \code{\link[=lsmeans]{lsmeans()}}.}
 
 \item{.in_ref_col}{(\code{logical})\cr \code{TRUE} when working with the reference level, \code{FALSE} otherwise.}

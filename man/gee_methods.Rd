@@ -10,6 +10,20 @@
 
 \method{QIC}{tern_gee}(object, ...)
 }
+\arguments{
+\item{x}{a fitted model object, usually an object inheriting from
+    class \code{"\link[nlme]{lme}"}.}
+
+\item{sigma}{an optional numeric value used as a multiplier for the
+    standard deviations.  The default is \code{x$sigma} or \code{1}
+    depending on \code{\link{class}(x)}.}
+
+\item{...}{further optional arguments passed to other methods (none
+    for the methods documented here).}
+
+\item{object}{a fitted GEE model from the geepack
+package. Currently only works on geeglm objects.}
+}
 \description{
 Additional methods which can simplify working with the GEE result object.
 }

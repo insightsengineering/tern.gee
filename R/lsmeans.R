@@ -4,6 +4,7 @@
 #' @param conf_level (`proportion`)\cr confidence level
 #' @param weights (`string`)\cr type of weights to be used for the least square means,
 #'   see [emmeans::emmeans()] for details.
+#' @param ... additional arguments for methods
 #'
 #' @return A `data.frame` with least-square means and contrasts. Additional
 #'   classes allow to dispatch downstream methods correctly, too.

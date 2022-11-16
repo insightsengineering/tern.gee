@@ -19,16 +19,15 @@ Depends:
     tern (>= 0.7.9)
 Imports:
     checkmate,
+    dplyr,
     geeasy,
     geepack,
     nlme,
     rtables,
     stats,
-    formatters,
-    rtables
+    formatters
 Suggests:
     knitr,
-    nestcolor,
     rmarkdown,
     testthat (>= 3.1),
     vdiffr
