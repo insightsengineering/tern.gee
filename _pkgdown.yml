@@ -26,6 +26,7 @@ reference:
       - fit_gee
       - lsmeans
       - tabulate_gee
+      - vars_gee
 
   - title: Example Data
     contents:
