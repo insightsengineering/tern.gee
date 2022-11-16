@@ -1,3 +1,4 @@
+---
 url: https://insightsengineering.github.io/tern.gee
 
 template:
@@ -7,3 +8,26 @@ navbar:
   right:
     - icon: fa-github
       href: https://github.com/insightsengineering/tern.gee
+
+reference:
+  - title: Overview Pages
+    contents:
+      - tern.gee-package
+
+  - title: Helper Methods
+    contents:
+      - gee_methods
+
+  - title: Model Specific Functions
+    desc: These functions help with fitting or extracting results from
+          specific models.
+    contents:
+      - as.rtable.tern_gee
+      - fit_gee
+      - lsmeans
+      - tabulate_gee
+      - vars_gee
+
+  - title: Example Data
+    contents:
+      - fev_data

@@ -1,0 +1,105 @@
+                                                           The SAS System                   Friday, October 21, 2022 11:09:00 AM   1
+
+                                                        The GENMOD Procedure
+
+                                                         Model Information
+
+                                                   Data Set               ANA.DAT
+                                                   Distribution          Binomial
+                                                   Link Function            Logit
+                                                   Dependent Variable    FEV1_BIN
+
+
+                                              Number of Observations Read         800
+                                              Number of Observations Used         537
+                                              Number of Events                    492
+                                              Number of Trials                    537
+                                              Missing Values                      263
+
+
+                                                      Class Level Information
+ 
+                              Class      Levels    Values
+
+                              RACE            3    Black or African American White Asian             
+                              ID            197    1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+                                                   21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37
+                                                   38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 55
+                                                   56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72
+                                                   73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88   
+                                                   ...                                               
+                              ARMCD           2    TRT PBO                                           
+                              WAVES           4    1 2 3 4                                           
+
+
+                                                          Response Profile
+ 
+                                                  Ordered                    Total
+                                                    Value    FEV1_BIN    Frequency
+
+                                                        1    1                 492
+                                                        2    0                  45
+
+PROC GENMOD is modeling the probability that FEV1_BIN='1'.
+
+
+                                                       Parameter Information
+ 
+                                  Parameter       Effect       RACE                         ARMCD
+
+                                  Prm1            Intercept                                      
+                                  Prm2            ARMCD                                     TRT  
+                                  Prm3            ARMCD                                     PBO  
+                                  Prm4            RACE         Black or African American         
+                                  Prm5            RACE         White                             
+                                  Prm6            RACE         Asian                             
+
+
+                            Algorithm converged.                                                       
+                                                           The SAS System                   Friday, October 21, 2022 11:09:00 AM   2
+
+                                                        The GENMOD Procedure
+
+                                                       GEE Model Information
+
+                                          Correlation Structure               Unstructured
+                                          Within-Subject Effect           WAVES (4 levels)
+                                          Subject Effect                   ID (200 levels)
+                                          Number of Clusters                           200
+                                          Clusters With Missing Values                 161
+                                          Correlation Matrix Dimension                   4
+                                          Maximum Cluster Size                           4
+                                          Minimum Cluster Size                           0
+
+
+                            Algorithm converged.                                                       
+
+
+                                                     Working Correlation Matrix
+ 
+                                                   Col1         Col2         Col3         Col4
+
+                                      Row1       1.0000      -0.0868      -0.1859      -0.1480
+                                      Row2      -0.0868       1.0000       0.0788       0.0077
+                                      Row3      -0.1859       0.0788       1.0000       0.0698
+                                      Row4      -0.1480       0.0077       0.0698       1.0000
+
+
+                                                         GEE Fit Criteria
+
+                                                       QIC          303.9454
+                                                       QICu         303.6369
+
+
+                                                Analysis Of GEE Parameter Estimates
+                                                 Empirical Standard Error Estimates
+ 
+                                                                   Standard   95% Confidence
+                      Parameter                           Estimate    Error       Limits            Z Pr > |Z|
+
+                      Intercept                             1.7193   0.2775   1.1755   2.2632    6.20   <.0001
+                      ARMCD     TRT                         0.6781   0.3299   0.0315   1.3247    2.06   0.0398
+                      ARMCD     PBO                         0.0000   0.0000   0.0000   0.0000     .      .    
+                      RACE      Black or African American   0.1492   0.3246  -0.4869   0.7853    0.46   0.6457
+                      RACE      White                       1.3111   0.5543   0.2246   2.3975    2.37   0.0180
+                      RACE      Asian                       0.0000   0.0000   0.0000   0.0000     .      .    
