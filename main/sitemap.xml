@@ -19,10 +19,10 @@
     <loc>https://insightsengineering.github.io/tern.gee/main/SECURITY.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/tern.gee/main/articles/hello.html</loc>
+    <loc>https://insightsengineering.github.io/tern.gee/main/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/tern.gee/main/articles/index.html</loc>
+    <loc>https://insightsengineering.github.io/tern.gee/main/articles/introduction.html</loc>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/tern.gee/main/authors.html</loc>
@@ -34,15 +34,30 @@
     <loc>https://insightsengineering.github.io/tern.gee/main/news/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/tern.gee/main/reference/hello.html</loc>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/fev_data.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/fit_gee.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/gee_methods.html</loc>
   </url>
   <url>
     <loc>https://insightsengineering.github.io/tern.gee/main/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/tern.gee/main/reference/plumber_api.html</loc>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/lsmeans.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/tern.gee/main/reference/shiny_app.html</loc>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/reexports.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/tabulate_gee.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/tern.gee-package.html</loc>
+  </url>
+  <url>
+    <loc>https://insightsengineering.github.io/tern.gee/main/reference/vars_gee.html</loc>
   </url>
 </urlset>
