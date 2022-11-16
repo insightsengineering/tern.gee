@@ -20,6 +20,7 @@ Depends:
 Imports:
     checkmate,
     dplyr,
+    emmeans,
     geeasy,
     geepack,
     nlme,
