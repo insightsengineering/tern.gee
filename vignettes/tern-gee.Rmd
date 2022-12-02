@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
-Generalized Estimating Equations (GEEs) are mainly used for modelling
+Generalized Estimating Equations (GEEs) are mainly used for modeling
 longitudinal binary or count endpoints from clinical trials. Within this
 package, a GEE is used to estimate the parameters of a generalized
 linear model that includes as fixed effects the variables: treatment
