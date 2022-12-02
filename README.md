@@ -47,12 +47,11 @@ A stable release of all `NEST` packages is also available [here](https://github.
 You can get started by trying out the example:
 
 ```r
-library(dplyr)
 library(tern.gee)
 
 fev_data$FEV1_BINARY <- as.integer(fev_data$FEV1 > 30)
 fev_counts <- fev_data %>%
-  select(USUBJID, ARMCD) %>%
+  dplyr::select(USUBJID, ARMCD) %>%
   unique()
 
 gee_fit <- fit_gee(
@@ -68,16 +67,15 @@ gee_fit <- fit_gee(
 
 lsmeans_df <- lsmeans(gee_fit, data = fev_data)
 
-basic_table() %>%
-  split_cols_by("ARMCD") %>%
-  add_colcounts() %>%
-  summarize_gee_logistic(
-    .in_ref_col = FALSE
-  ) %>%
+basic_table(show_colcounts = TRUE) %>%
+  split_cols_by("ARMCD", ref_group = "PBO") %>%
+  summarize_gee_logistic() %>%
   build_table(lsmeans_df, alt_counts_df = fev_counts)
 ```
 
 This specifies a GEE with the `FEV1_BINARY` outcome and the `RACE` and `SEX` covariates for subjects identified by `USUBJID` and treatment arm `ARMCD` observed over time points identified by `AVISIT` in the `fev_data` data set. By default, logistic regression is used and an unstructured covariance matrix is assumed. The least square means assume equal weights for factor combinations.
+
+For more information on how GEE models and their `rtables` tables are created see [the introduction vignette](https://insightsengineering.github.io/tern.gee/main/articles/tern-gee.html).
 
 ## Stargazers
 
