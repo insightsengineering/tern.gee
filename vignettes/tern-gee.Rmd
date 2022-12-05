@@ -77,7 +77,10 @@ head(fev_data)
 Fitting a GEE model is easy when you use `tern.gee`. By default, the
 model fitting function `fit_gee()` assumes unstructured correlation and
 proportional weights when calculating LS means, and fits a logistic
-regression model.
+regression model. Currently only logistic regression has been
+implemented as an available regression model when using `fit_gee()`. In
+future the package will be extended to include other models such as
+Poisson regression, etc. as alternative options.
 
 ```{r}
 fev_fit <- fit_gee(
