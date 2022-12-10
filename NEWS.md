@@ -1,7 +1,7 @@
-# tern.gee 0.0.0.9007
+# tern.gee 0.1.0
 
-### Miscellaneous
+### Enhancements
 
-* Initialize the package.
+* First release 🎉
 * Update pkgdown site, introduction vignette, and README, add unit tests.
 * Add examples for `fit_gee`, `lsmeans`, `s_lsmeans_logistic`, `summarize_gee_logistic`.
