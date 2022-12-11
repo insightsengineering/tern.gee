@@ -1,8 +1,23 @@
 # tern.gee
 
 <!-- start badges -->
-[![Code Coverage](https://raw.githubusercontent.com/insightsengineering/tern.gee/_xml_coverage_reports/data/main/badge.svg)](https://raw.githubusercontent.com/insightsengineering/tern.gee/_xml_coverage_reports/data/main/coverage.xml)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![Check 🛠](https://github.com/insightsengineering/tern.gee/actions/workflows/check.yaml/badge.svg)](https://github.com/insightsengineering/tern.gee/actions/workflows/check.yaml)
+[![Docs 📚](https://github.com/insightsengineering/tern.gee/actions/workflows/docs.yaml/badge.svg)](https://insightsengineering.github.io/tern.gee/)
+[![Release 🎈](https://github.com/insightsengineering/tern.gee/actions/workflows/release.yaml/badge.svg)](https://github.com/insightsengineering/tern.gee/releases)
+[![Code Coverage 📔](https://raw.githubusercontent.com/insightsengineering/tern.gee/_xml_coverage_reports/data/main/badge.svg)](https://raw.githubusercontent.com/insightsengineering/tern.gee/_xml_coverage_reports/data/main/coverage.xml)
+
+![GitHub forks](https://img.shields.io/github/forks/insightsengineering/tern.gee?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/insightsengineering/tern.gee?style=social)
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/insightsengineering/tern.gee)
+![GitHub contributors](https://img.shields.io/github/contributors/insightsengineering/tern.gee)
+![GitHub last commit](https://img.shields.io/github/last-commit/insightsengineering/tern.gee)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/insightsengineering/tern.gee)
+![GitHub repo size](https://img.shields.io/github/repo-size/insightsengineering/tern.gee)
+![GitHub language count](https://img.shields.io/github/languages/count/insightsengineering/tern.gee)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Current Version](https://img.shields.io/github/r-package/v/insightsengineering/tern.gee/main?color=purple\&label=package%20version)](https://github.com/insightsengineering/tern.gee/tree/main)
+[![Open Issues](https://img.shields.io/github/issues-raw/insightsengineering/tern.gee?color=red\&label=open%20issues)](https://github.com/insightsengineering/tern.gee/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 <!-- end badges -->
 
 ## Overview
