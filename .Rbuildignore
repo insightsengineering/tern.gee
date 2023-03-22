@@ -7,6 +7,7 @@ SECURITY.md
 ^_pkgdown\.yml$
 ^vignettes/hello\.Rmd$
 ^docs$
+^design$
 ^\.github$
 README.*
 ^\.lintr$

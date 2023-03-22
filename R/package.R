@@ -11,3 +11,8 @@
 #' @importFrom tern f_conf_level
 #' @importFrom emmeans emmeans
 NULL
+
+# to avoid NOTEs from R CMD CHECK
+utils::globalVariables(c(
+  ".id", ".waves"
+))
