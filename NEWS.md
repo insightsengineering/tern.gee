@@ -1,13 +1,9 @@
-# tern.gee 0.1.0.9008
+# tern.gee 0.1.1
 
-### Miscellaneous
-
-* Add badges to README.
+* Added badges to README.
 
 # tern.gee 0.1.0
 
-### Enhancements
-
-* First release
-* Update pkgdown site, introduction vignette, and README, add unit tests.
-* Add examples for `fit_gee`, `lsmeans`, `s_lsmeans_logistic`, `summarize_gee_logistic`.
+* First release.
+* Updated pkgdown site, introduction vignette, and README, added unit tests.
+* Added examples for `fit_gee`, `lsmeans`, `s_lsmeans_logistic`, `summarize_gee_logistic`.
