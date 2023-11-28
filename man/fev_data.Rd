@@ -7,7 +7,7 @@
 \format{
 A \code{tibble} with 800 rows and 7 variables:
 \itemize{
-\item \code{USUBJID}: price, in US dollars.
+\item \code{USUBJID}: unique subject identifier.
 \item \code{AVISIT}: visit number.
 \item \code{ARMCD}: treatment, \code{TRT} or \code{PBO}.
 \item \code{RACE}: 3-category race.
