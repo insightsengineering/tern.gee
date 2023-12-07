@@ -11,17 +11,17 @@ model <- fit_gee(
 
 # to do: finish test once h_gee_coef is working correctly
 # test_that("h_gee_coef works as expected", {
-  # result <- expect_silent(h_gee_coef(model))
-  # result2 <- as.rtable(model, type = "coef", format = "xx.xxxx")
-  # expect_identical(result, result2)
-  #
-  # result_matrix <- to_string_matrix(result)
-  # expected_matrix <- structure(
-  #   c(
-  #   ),
-  #   dim = c()
-  # )
-  # expect_identical(result_matrix, expected_matrix)
+# result <- expect_silent(h_gee_coef(model))
+# result2 <- as.rtable(model, type = "coef", format = "xx.xxxx")
+# expect_identical(result, result2)
+#
+# result_matrix <- to_string_matrix(result)
+# expected_matrix <- structure(
+#   c(
+#   ),
+#   dim = c()
+# )
+# expect_identical(result_matrix, expected_matrix)
 # })
 
 test_that("h_gee_cov works as expected", {
