@@ -10,7 +10,11 @@ Authors@R: c(
     person("Emily", "de la Rua", , "emily.de_la_rua@contractors.roche.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
-Description: Create tables and graphs for GEE model fits.
+Description: Generalized estimating equations (GEE) are a popular choice for analyzing 
+  longitudinal binary outcomes. This package provides an interface for fitting GEE,
+  currently for logistic regression, within the 'tern' <https://cran.r-project.org/package=tern> 
+  framework and tabulate results easily using 'rtables' <https://cran.r-project.org/package=rtables>.
+  It builds on 'geepack' <doi:10.18637/jss.v015.i02> for the actual GEE model fitting.
 License: Apache License 2.0 | file LICENSE
 URL: https://github.com/insightsengineering/tern.gee/
 BugReports: https://github.com/insightsengineering/tern.gee/issues
