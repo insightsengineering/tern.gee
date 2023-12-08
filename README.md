@@ -43,19 +43,20 @@ However if you use another reporting framework then it will be better to directl
 
 ## Installation
 
-### GitHub
+`tern.gee` is available on CRAN and you can install the latest released version with:
 
-It is recommended that you [create and use a Github PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to install the latest version of this package. Once you have the PAT, run the following:
-
-```r
-Sys.setenv(GITHUB_PAT = "your_access_token_here")
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("insightsengineering/tern.gee@*release")
+``` r
+install.packages("tern.gee")
 ```
 
-### `NEST` distribution
+or you can install the latest development version directly from GitHub by running the following:
 
-A stable release of all `NEST` packages is also available [here](https://github.com/insightsengineering/depository#readme).
+``` r
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("insightsengineering/tern.gee")
+```
+
+Note that it is recommended you [create and use a `GITHUB_PAT`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) if installing from GitHub.
 
 ## Getting started
 
