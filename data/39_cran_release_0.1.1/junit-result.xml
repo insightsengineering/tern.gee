@@ -1,53 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="fit_gee" timestamp="2023-12-11T20:09:29Z" hostname="cc6783a8f6b1" tests="16" skipped="0" failures="0" errors="0" time="1.121">
-    <testcase time="0.024" classname="fit_gee" name="build_formula_builds_the_correct_formula"/>
-    <testcase time="0.0210000000000001" classname="fit_gee" name="build_formula_works_without_covariates"/>
-    <testcase time="0.00499999999999989" classname="fit_gee" name="build_formula_works_without_covariates"/>
-    <testcase time="0.502" classname="fit_gee" name="build_family_returns_the_correct_class"/>
-    <testcase time="0.00199999999999978" classname="fit_gee" name="build_family_returns_the_correct_class"/>
-    <testcase time="0.0140000000000002" classname="fit_gee" name="build_family_gives_error_message_if_incorrect_regression_type_is_given"/>
-    <testcase time="0.00999999999999979" classname="fit_gee" name="build_cor_details_returns_the_correct_correlation_details"/>
-    <testcase time="0.0110000000000001" classname="fit_gee" name="build_cor_details_gives_error_message_if_incorrect_correlation_structure_is_given"/>
-    <testcase time="0.176" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.00100000000000033" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.112" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
+  <testsuite name="fit_gee" timestamp="2023-12-11T20:29:39Z" hostname="be43b9947e3b" tests="25" skipped="0" failures="0" errors="2" time="1.219">
+    <testcase time="0.0229999999999999" classname="fit_gee" name="build_formula_builds_the_correct_formula"/>
+    <testcase time="0.0209999999999999" classname="fit_gee" name="build_formula_works_without_covariates"/>
+    <testcase time="0.004" classname="fit_gee" name="build_formula_works_without_covariates"/>
+    <testcase time="0.491" classname="fit_gee" name="build_family_returns_the_correct_class"/>
+    <testcase time="0.00200000000000022" classname="fit_gee" name="build_family_returns_the_correct_class"/>
+    <testcase time="0.0139999999999998" classname="fit_gee" name="build_family_gives_error_message_if_incorrect_regression_type_is_given"/>
+    <testcase time="0.00900000000000034" classname="fit_gee" name="build_cor_details_returns_the_correct_correlation_details"/>
+    <testcase time="0.0109999999999997" classname="fit_gee" name="build_cor_details_gives_error_message_if_incorrect_correlation_structure_is_given"/>
+    <testcase time="0.00699999999999967" classname="fit_gee" name="order_data_works_as_expected"/>
+    <testcase time="0.00300000000000011" classname="fit_gee" name="order_data_works_as_expected"/>
+    <testcase time="0.00200000000000022" classname="fit_gee" name="order_data_works_as_expected"/>
+    <testcase time="0.00499999999999989" classname="fit_gee" name="order_data_works_as_expected">
+      <error type="error" message="Error in `eval(code, test_env)`: object 'df_order' not found ('test-fit_gee.R:50:3')">Error in `eval(code, test_env)`: object 'df_order' not found
+Backtrace:
+    x
+ 1. \-testthat::expect_identical(df_order, seq_len(nrow(result))) at test-fit_gee.R:50:3
+ 2.   \-testthat::quasi_label(enquo(object), label, arg = "object")
+ 3.     \-rlang::eval_bare(expr, quo_get_env(quo))</error>
+    </testcase>
+    <testcase time="0.0659999999999998" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.004" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable">
+      <error type="error" message="Error in `eval(code, test_env)`: object 'df_order' not found ('test-fit_gee.R:69:3')">Error in `eval(code, test_env)`: object 'df_order' not found
+Backtrace:
+    x
+ 1. \-testthat::expect_identical(df_order, seq_len(nrow(result))) at test-fit_gee.R:69:3
+ 2.   \-testthat::quasi_label(enquo(object), label, arg = "object")
+ 3.     \-rlang::eval_bare(expr, quo_get_env(quo))</error>
+    </testcase>
+    <testcase time="0.18" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.00199999999999978" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.113" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
     <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.111" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.00199999999999978" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.126" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.102" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.151" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
     <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
   </testsuite>
-  <testsuite name="gee_methods" timestamp="2023-12-11T20:09:30Z" hostname="cc6783a8f6b1" tests="10" skipped="0" failures="0" errors="0" time="0.654">
-    <testcase time="0.162" classname="gee_methods" name="vcov_works_as_expected"/>
+  <testsuite name="gee_methods" timestamp="2023-12-11T20:29:41Z" hostname="be43b9947e3b" tests="10" skipped="0" failures="0" errors="0" time="0.618">
+    <testcase time="0.142" classname="gee_methods" name="vcov_works_as_expected"/>
     <testcase time="0.00199999999999978" classname="gee_methods" name="vcov_works_as_expected"/>
-    <testcase time="0.136" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.00700000000000012" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.093" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.00599999999999978" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.115" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.00599999999999978" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.121" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
-    <testcase time="0.00600000000000023" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.135" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.00599999999999978" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.0920000000000001" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.00600000000000023" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.106" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.00499999999999989" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.119" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.00499999999999989" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
   </testsuite>
-  <testsuite name="lsmeans" timestamp="2023-12-11T20:09:31Z" hostname="cc6783a8f6b1" tests="4" skipped="0" failures="0" errors="0" time="0.24">
-    <testcase time="0.231" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
-    <testcase time="0.00100000000000033" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+  <testsuite name="lsmeans" timestamp="2023-12-11T20:29:41Z" hostname="be43b9947e3b" tests="4" skipped="0" failures="0" errors="0" time="0.239">
+    <testcase time="0.229" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
     <testcase time="0.00199999999999978" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
-    <testcase time="0.00600000000000023" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+    <testcase time="0.00200000000000022" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+    <testcase time="0.00599999999999978" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
   </testsuite>
-  <testsuite name="tabulate_gee" timestamp="2023-12-11T20:09:31Z" hostname="cc6783a8f6b1" tests="7" skipped="3" failures="0" errors="0" time="0.932">
-    <testcase time="0.182" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
+  <testsuite name="tabulate_gee" timestamp="2023-12-11T20:29:42Z" hostname="be43b9947e3b" tests="7" skipped="3" failures="0" errors="0" time="0.9">
+    <testcase time="0.18" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
     <testcase time="0.024" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
-    <testcase time="0.0949999999999998" classname="tabulate_gee" name="h_gee_cov_works_as_expected">
+    <testcase time="0.0940000000000003" classname="tabulate_gee" name="h_gee_cov_works_as_expected">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:32:3')"/>
     </testcase>
-    <testcase time="0.0800000000000001" classname="tabulate_gee" name="s_lsmeans_logistic_works_as_expected_when_not_in_reference_column"/>
-    <testcase time="0.0570000000000004" classname="tabulate_gee" name="s_mmrm_lsmeans_works_as_expected_when_in_reference_column"/>
-    <testcase time="0.268" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_covariates_in_the_model">
+    <testcase time="0.0699999999999994" classname="tabulate_gee" name="s_lsmeans_logistic_works_as_expected_when_not_in_reference_column"/>
+    <testcase time="0.0609999999999999" classname="tabulate_gee" name="s_mmrm_lsmeans_works_as_expected_when_in_reference_column"/>
+    <testcase time="0.264" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_covariates_in_the_model">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:73:3')"/>
     </testcase>
-    <testcase time="0.226" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_no_covariates_in_the_model">
+    <testcase time="0.207" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_no_covariates_in_the_model">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:98:3')"/>
     </testcase>
   </testsuite>
