@@ -13,7 +13,7 @@ Authors@R: c(
 Description: Generalized estimating equations (GEE) are a popular choice for analyzing 
   longitudinal binary outcomes. This package provides an interface for fitting GEE,
   currently for logistic regression, within the 'tern' <https://cran.r-project.org/package=tern> 
-  framework (Zhu, Sabanés Bové et al., 2023) and tabulate results easily using 
+  framework (Zhu, Sabanés Bové et al., 2023) and tabulate results easily using
   'rtables' <https://cran.r-project.org/package=rtables> (Becker, Waddell et al., 2023).
   It builds on 'geepack' <doi:10.18637/jss.v015.i02> (Højsgaard, Halekoh and Yan, 2006) 
   for the actual GEE model fitting.
