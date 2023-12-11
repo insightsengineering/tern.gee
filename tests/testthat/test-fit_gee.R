@@ -47,7 +47,7 @@ test_that("order_data works as expected", {
   result <- expect_silent(order_data(data = df, vars = vars))
   expect_integer(result$USUBJID, sorted = TRUE)
   result_order <- order(result$USUBJID, result$AVISIT)
-  expect_identical(df_order, seq_len(nrow(result)))
+  expect_identical(result_order, seq_len(nrow(result)))
 })
 
 test_that("order_data messages are as expected and can be suppressed for character visit variable", {
@@ -66,7 +66,7 @@ test_that("order_data messages are as expected and can be suppressed for charact
   )
   expect_integer(result$USUBJID, sorted = TRUE)
   result_order <- order(result$USUBJID, result$AVISIT)
-  expect_identical(df_order, seq_len(nrow(result)))
+  expect_identical(result_order, seq_len(nrow(result)))
 })
 
 # fit_gee ----
