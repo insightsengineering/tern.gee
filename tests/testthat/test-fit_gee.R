@@ -38,6 +38,37 @@ test_that("build_cor_details gives error message if incorrect correlation struct
   expect_error(build_cor_details("BLAHHH", fev_vars, fev_data), "correlation structure BLAHHH not available")
 })
 
+# order_data ----
+
+test_that("order_data works as expected", {
+  vars <- list(id = "USUBJID", visit = "AVISIT")
+  df <- fev_data[c(7, 2, 9, 3, 1, 5, 8, 6, 4, 10), ]
+  expect_factor(df$USUBJID)
+  result <- expect_silent(order_data(data = df, vars = vars))
+  expect_integer(result$USUBJID, sorted = TRUE)
+  result_order <- order(result$USUBJID, result$AVISIT)
+  expect_identical(df_order, seq_len(nrow(result)))
+})
+
+test_that("order_data messages are as expected and can be suppressed for character visit variable", {
+  vars <- list(id = "USUBJID", visit = "AVISIT")
+  df <- fev_data[c(7, 2, 9, 3, 1, 5, 8, 6, 4, 10), ]
+  df$AVISIT <- as.character(df$AVISIT)
+  expect_message(
+    expect_message(
+      expect_message(
+        result <- order_data(data = df, vars = vars),
+        "visit variable AVISIT will be coerced to factor for ordering"
+      ),
+      "order is:"
+    ),
+    "VIS1, VIS2, VIS3, VIS4"
+  )
+  expect_integer(result$USUBJID, sorted = TRUE)
+  result_order <- order(result$USUBJID, result$AVISIT)
+  expect_identical(df_order, seq_len(nrow(result)))
+})
+
 # fit_gee ----
 
 ## logistic ----

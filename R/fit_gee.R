@@ -93,6 +93,7 @@ build_cor_details <- function(cor_str, vars, data) {
   )
 }
 
+#' @keywords internal
 order_data <- function(data, vars) {
   assert_data_frame(data)
   assert_list(vars)
@@ -101,7 +102,7 @@ order_data <- function(data, vars) {
     message(paste("visit variable", vars$visit, "will be coerced to factor for ordering"))
     message("order is:")
     data[[vars$visit]] <- factor(data[[vars$visit]])
-    cat(toString(levels(data[[vars$visit]])))
+    message(paste(toString(levels(data[[vars$visit]])), "\n"))
   }
   if (is.factor(data[[vars$id]]) || is.character(data[[vars$id]])) {
     data[[vars$id]] <- as.integer(as.factor(data[[vars$id]]))
