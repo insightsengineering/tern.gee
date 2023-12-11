@@ -48,6 +48,16 @@ are analyzed multiple times, to avoid warnings from \code{rtables}.}
 
 \item{.labels}{(named \code{character})\cr labels for the statistics (without indent).}
 }
+\value{
+The functions have different purposes:
+\itemize{
+\item \code{as.rtable()} returns either the coefficient table or the covariance matrix as an
+\code{rtables} object.
+\item \code{s_lsmeans_logistic()} returns several least square mean statistics from the GEE.
+\item \code{a_lsmeans_logistic()} is the formatted analysis function and returns the formatted statistics.
+\item \code{summarize_gee_logistic()} is the analyze function and returns the modified \code{rtables} layout.
+}
+}
 \description{
 Functions to produce tables from a fitted GEE produced with \code{\link[=fit_gee]{fit_gee()}}.
 }
