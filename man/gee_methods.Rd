@@ -22,6 +22,10 @@
 
 \item{object}{(\code{tern_gee})\cr result of \code{\link[=fit_gee]{fit_gee()}}.}
 }
+\value{
+\code{VarCorr()} returns the estimated covariance matrix, and
+\code{QIC()} returns the QIC value.
+}
 \description{
 Additional methods which can simplify working with the GEE result object.
 }

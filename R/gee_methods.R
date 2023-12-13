@@ -2,6 +2,8 @@
 #'
 #' Additional methods which can simplify working with the GEE result object.
 #' @name gee_methods
+#' @returns `VarCorr()` returns the estimated covariance matrix, and
+#'   `QIC()` returns the QIC value.
 NULL
 
 #' @rdname gee_methods

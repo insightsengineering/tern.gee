@@ -117,7 +117,7 @@ After fitting a GEE model and extracting the LS means you may want to
 display your results in a table. The `tern.gee` package contains
 functionality to summarize the results of a `lsmeans()` object in an
 `rtable` structure, using additional functions from the [`rtables`
-package](https://roche.github.io/rtables/main/).
+package](https://insightsengineering.github.io/rtables/).
 
 ```{r}
 fev_counts <- fev_data %>%

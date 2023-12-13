@@ -3,6 +3,12 @@
 #' Functions to produce tables from a fitted GEE produced with [fit_gee()].
 #'
 #' @name tabulate_gee
+#' @returns The functions have different purposes:
+#'   - `as.rtable()` returns either the coefficient table or the covariance matrix as an
+#'   `rtables` object.
+#'   - `s_lsmeans_logistic()` returns several least square mean statistics from the GEE.
+#'   - `a_lsmeans_logistic()` is the formatted analysis function and returns the formatted statistics.
+#'   - `summarize_gee_logistic()` is the analyze function and returns the modified `rtables` layout.
 NULL
 
 #' @importFrom tern as.rtable

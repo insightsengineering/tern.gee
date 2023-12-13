@@ -1,6 +1,7 @@
-# tern.gee 0.1.1.9000
+# tern.gee 0.1.3
 
 * Added badges to README.
+* Minor updates including package description.
 
 # tern.gee 0.1.0
 
