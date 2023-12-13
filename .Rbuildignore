@@ -16,3 +16,4 @@ coverage.*
 ^\.pre-commit-config\.yaml$
 ^codemeta\.json$
 ^\.gitlab-ci\.yml$
+^pkgdown$
