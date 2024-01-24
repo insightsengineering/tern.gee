@@ -38,7 +38,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.1),
-    vdiffr
+    vdiffr,
+    withr (>= 2.0.0)
 VignetteBuilder:
     knitr
 Config/testthat/edition: 3
@@ -46,4 +47,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.0
