@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tern.gee</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9000</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,14 +27,6 @@
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/v0.1.3">v0.1.3</a> </div></li>
-<!-- end dropdown for versions -->
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-reports">Reports</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-reports">
@@ -109,20 +101,26 @@ classes allow to dispatch downstream methods correctly, too.</p>
 <span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="fit_gee.html">fit_gee</a></span><span class="op">(</span>vars <span class="op">=</span> <span class="fu"><a href="vars_gee.html">vars_gee</a></span><span class="op">(</span>arm <span class="op">=</span> <span class="st">"ARMCD"</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">df</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">lsmeans</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n   or_est</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   PBO 0.5018860  0.02641388     0.4502799     0.5534520 420       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   TRT 0.5458596  0.02486352     0.4968439     0.5940023 380 1.192929</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   or_lower_cl or_upper_cl log_or_est log_or_lower_cl log_or_upper_cl conf_level</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          NA          NA         NA              NA              NA       0.95</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0.8966238    1.587153  0.1764114      -0.1091189       0.4619416       0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n    or_est</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   PBO 0.5349901  0.02202202     0.4916734     0.5777854 420        NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   TRT 0.5254463  0.02338787     0.4795214     0.5709448 380 0.9624085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   or_lower_cl or_upper_cl  log_or_est log_or_lower_cl log_or_upper_cl</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          NA          NA          NA              NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0.7474451    1.239195 -0.03831627      -0.2910944       0.2144619</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   conf_level</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0.95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       0.95</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">lsmeans</span><span class="op">(</span><span class="va">fit</span>, conf_level <span class="op">=</span> <span class="fl">0.90</span>, weights <span class="op">=</span> <span class="st">"equal"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n   or_est</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   PBO 0.5018860  0.02641388     0.4502799     0.5534520 420       NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   TRT 0.5458596  0.02486352     0.4968439     0.5940023 380 1.192929</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   or_lower_cl or_upper_cl log_or_est log_or_lower_cl log_or_upper_cl conf_level</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          NA          NA         NA              NA              NA        0.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0.9387434     1.51594  0.1764114     -0.06321316       0.4160359        0.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n    or_est</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   PBO 0.5349901  0.02202202     0.4916734     0.5777854 420        NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   TRT 0.5254463  0.02338787     0.4795214     0.5709448 380 0.9624085</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   or_lower_cl or_upper_cl  log_or_est log_or_lower_cl log_or_upper_cl</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          NA          NA          NA              NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    0.778447    1.189844 -0.03831627      -0.2504544       0.1738218</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   conf_level</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        0.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2        0.9</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
