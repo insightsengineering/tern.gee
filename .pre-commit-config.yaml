@@ -9,7 +9,15 @@ repos:
         args: [--style_pkg=styler, --style_fun=tidyverse_style]
       - id: roxygenize
         additional_dependencies:
-          - shiny
+          - tern
+          - checkmate
+          - emmeans
+          - formatters
+          - geeasy
+          - geepack
+          - nlme
+          - rtables
+          - stats
       # codemeta must be above use-tidy-description when both are used
       # -   id: codemeta-description-updated
       - id: use-tidy-description
