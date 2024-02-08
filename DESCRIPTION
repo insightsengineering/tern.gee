@@ -19,7 +19,8 @@ Description: Generalized estimating equations (GEE) are a popular choice
     2023).  It builds on 'geepack' <doi:10.18637/jss.v015.i02> (Højsgaard,
     Halekoh and Yan, 2006) for the actual GEE model fitting.
 License: Apache License 2.0
-URL: https://github.com/insightsengineering/tern.gee/
+URL: https://insightsengineering.github.io/tern.gee/,
+    https://github.com/insightsengineering/tern.gee/
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
