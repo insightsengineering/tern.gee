@@ -11,6 +11,7 @@ Create tables and graphs for GEE model fits.
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://insightsengineering.github.io/tern.gee/}
   \item \url{https://github.com/insightsengineering/tern.gee/}
   \item Report bugs at \url{https://github.com/insightsengineering/tern.gee/issues}
 }
