@@ -2,8 +2,8 @@ Type: Package
 Package: tern.gee
 Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model
     Fits
-Version: 0.1.3.9004
-Date: 2024-03-04
+Version: 0.1.3.9005
+Date: 2024-04-10
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel.sabanes_bove@roche.com", role = c("aut", "cre")),
     person("Joe", "Zhu", , "joe.zhu@roche.com", role = "aut"),
@@ -39,7 +39,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.1),
-    vdiffr,
+    vdiffr (>= 1.0.0),
     withr (>= 2.0.0)
 VignetteBuilder:
     knitr
