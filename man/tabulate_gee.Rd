@@ -25,7 +25,7 @@ summarize_gee_logistic(
 )
 }
 \arguments{
-\item{x}{the object which should be converted to an \code{rtable}.}
+\item{x}{(\code{data.frame})\cr the object which should be converted to an \code{rtable}.}
 
 \item{type}{(\code{character})\cr type of table to extract from \code{tern_gee} object.}
 
