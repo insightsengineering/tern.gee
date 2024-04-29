@@ -17,3 +17,6 @@ coverage.*
 ^codemeta\.json$
 ^\.gitlab-ci\.yml$
 ^pkgdown$
+^.revdeprefs\.yaml$
+^revdep$
+^\.covrignore$
