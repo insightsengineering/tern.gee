@@ -41,7 +41,7 @@ lsmeans.tern_gee_logistic <- function(object,
   )
 
   prop_df <- cbind(
-    as.data.frame(prop_emm)[, c(object$vars$arm, "prob", "SE", "asymp.LCL", "asymp.UCL")],
+    data.frame(confint(prop_emm))[, c(object$vars$arm, "prob", "SE", "asymp.LCL", "asymp.UCL")],
     n = as.list(prop_emm)$extras[, ".wgt."]
   )
   names(prop_df) <- c(object$vars$arm, "prop_est", "prop_est_se", "prop_lower_cl", "prop_upper_cl", "n")
