@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="fit_gee" timestamp="2024-04-29T15:35:23Z" hostname="05984a2d80b8" tests="25" skipped="0" failures="0" errors="0" time="1.164">
-    <testcase time="0.0149999999999999" classname="fit_gee" name="build_formula_builds_the_correct_formula"/>
-    <testcase time="0.0270000000000001" classname="fit_gee" name="build_formula_works_without_covariates"/>
-    <testcase time="0.004" classname="fit_gee" name="build_formula_works_without_covariates"/>
-    <testcase time="0.5" classname="fit_gee" name="build_family_returns_the_correct_class"/>
-    <testcase time="0.00200000000000022" classname="fit_gee" name="build_family_returns_the_correct_class"/>
-    <testcase time="0.0129999999999999" classname="fit_gee" name="build_family_gives_error_message_if_incorrect_regression_type_is_given"/>
-    <testcase time="0.00700000000000012" classname="fit_gee" name="build_cor_details_returns_the_correct_correlation_details"/>
-    <testcase time="0.0089999999999999" classname="fit_gee" name="build_cor_details_gives_error_message_if_incorrect_correlation_structure_is_given"/>
-    <testcase time="0.00600000000000023" classname="fit_gee" name="order_data_works_as_expected"/>
+  <testsuite name="fit_gee" timestamp="2024-06-11T16:35:59Z" hostname="51e18daeff35" tests="25" skipped="0" failures="0" errors="0" time="0.935">
+    <testcase time="0.0210000000000001" classname="fit_gee" name="build_formula_builds_the_correct_formula"/>
+    <testcase time="0.024" classname="fit_gee" name="build_formula_works_without_covariates"/>
+    <testcase time="0.00499999999999989" classname="fit_gee" name="build_formula_works_without_covariates"/>
+    <testcase time="0.3" classname="fit_gee" name="build_family_returns_the_correct_class"/>
+    <testcase time="0.00199999999999978" classname="fit_gee" name="build_family_returns_the_correct_class"/>
+    <testcase time="0.0089999999999999" classname="fit_gee" name="build_family_gives_error_message_if_incorrect_regression_type_is_given"/>
+    <testcase time="0.00600000000000023" classname="fit_gee" name="build_cor_details_returns_the_correct_correlation_details"/>
+    <testcase time="0.00800000000000001" classname="fit_gee" name="build_cor_details_gives_error_message_if_incorrect_correlation_structure_is_given"/>
+    <testcase time="0.004" classname="fit_gee" name="order_data_works_as_expected"/>
     <testcase time="0.00299999999999967" classname="fit_gee" name="order_data_works_as_expected"/>
-    <testcase time="0.00100000000000033" classname="fit_gee" name="order_data_works_as_expected"/>
-    <testcase time="0.00399999999999956" classname="fit_gee" name="order_data_works_as_expected"/>
-    <testcase time="0.0230000000000001" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00800000000000001" classname="fit_gee" name="order_data_works_as_expected"/>
+    <testcase time="0.00300000000000011" classname="fit_gee" name="order_data_works_as_expected"/>
+    <testcase time="0.0180000000000002" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
     <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
-    <testcase time="0.00100000000000033" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
-    <testcase time="0.00199999999999978" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
     <testcase time="0.00300000000000011" classname="fit_gee" name="order_data_messages_are_as_expected_and_can_be_suppressed_for_character_visit_variable"/>
-    <testcase time="0.175" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.109" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.00199999999999978" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.128" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.123" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
-    <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.143" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="fit_gee_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.141" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.00200000000000022" classname="fit_gee" name="fit_gee_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.0999999999999996" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.00100000000000033" classname="fit_gee" name="fit_gee_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.129" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.00099999999999989" classname="fit_gee" name="fit_gee_works_as_expected_for_Toeplitz_correlation_structure"/>
   </testsuite>
-  <testsuite name="gee_methods" timestamp="2024-04-29T15:35:24Z" hostname="05984a2d80b8" tests="10" skipped="0" failures="0" errors="0" time="0.616">
-    <testcase time="0.146" classname="gee_methods" name="vcov_works_as_expected"/>
-    <testcase time="0.00199999999999978" classname="gee_methods" name="vcov_works_as_expected"/>
-    <testcase time="0.134" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.00499999999999989" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
-    <testcase time="0.0909999999999997" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.004" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
-    <testcase time="0.104" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.00499999999999989" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
-    <testcase time="0.12" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
-    <testcase time="0.00499999999999989" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
+  <testsuite name="gee_methods" timestamp="2024-06-11T16:36:00Z" hostname="51e18daeff35" tests="10" skipped="0" failures="0" errors="0" time="0.597">
+    <testcase time="0.138" classname="gee_methods" name="vcov_works_as_expected"/>
+    <testcase time="0.00200000000000022" classname="gee_methods" name="vcov_works_as_expected"/>
+    <testcase time="0.132" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.00500000000000034" classname="gee_methods" name="VarCorr_works_as_expected_for_unstructured_correlation_structure"/>
+    <testcase time="0.0879999999999996" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.00500000000000034" classname="gee_methods" name="VarCorr_works_as_expected_for_compound_symmetry_correlation_structure"/>
+    <testcase time="0.103" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.004" classname="gee_methods" name="VarCorr_works_as_expected_for_AR1_correlation_structure"/>
+    <testcase time="0.116" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
+    <testcase time="0.004" classname="gee_methods" name="VarCorr_works_as_expected_for_Toeplitz_correlation_structure"/>
   </testsuite>
-  <testsuite name="lsmeans" timestamp="2024-04-29T15:35:24Z" hostname="05984a2d80b8" tests="4" skipped="0" failures="0" errors="0" time="0.241">
-    <testcase time="0.232" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+  <testsuite name="lsmeans" timestamp="2024-06-11T16:36:01Z" hostname="51e18daeff35" tests="4" skipped="0" failures="0" errors="0" time="0.242">
+    <testcase time="0.233" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
     <testcase time="0.00199999999999978" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
-    <testcase time="0.00100000000000033" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
-    <testcase time="0.00599999999999978" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+    <testcase time="0.00200000000000022" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
+    <testcase time="0.00499999999999989" classname="lsmeans" name="lsmeans_works_for_logistic_model"/>
   </testsuite>
-  <testsuite name="tabulate_gee" timestamp="2024-04-29T15:35:25Z" hostname="05984a2d80b8" tests="7" skipped="3" failures="0" errors="0" time="0.932">
-    <testcase time="0.177" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
-    <testcase time="0.0220000000000002" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
-    <testcase time="0.0969999999999995" classname="tabulate_gee" name="h_gee_cov_works_as_expected">
+  <testsuite name="tabulate_gee" timestamp="2024-06-11T16:36:01Z" hostname="51e18daeff35" tests="7" skipped="3" failures="0" errors="0" time="0.974">
+    <testcase time="0.178" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
+    <testcase time="0.024" classname="tabulate_gee" name="h_gee_cov_works_as_expected"/>
+    <testcase time="0.118" classname="tabulate_gee" name="h_gee_cov_works_as_expected">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:32:3')"/>
     </testcase>
-    <testcase time="0.0810000000000004" classname="tabulate_gee" name="s_lsmeans_logistic_works_as_expected_when_not_in_reference_column"/>
-    <testcase time="0.0579999999999998" classname="tabulate_gee" name="s_mmrm_lsmeans_works_as_expected_when_in_reference_column"/>
-    <testcase time="0.27" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_covariates_in_the_model">
+    <testcase time="0.0780000000000003" classname="tabulate_gee" name="s_lsmeans_logistic_works_as_expected_when_not_in_reference_column"/>
+    <testcase time="0.0559999999999996" classname="tabulate_gee" name="s_mmrm_lsmeans_works_as_expected_when_in_reference_column"/>
+    <testcase time="0.289000000000001" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_covariates_in_the_model">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:73:3')"/>
     </testcase>
-    <testcase time="0.226999999999999" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_no_covariates_in_the_model">
+    <testcase time="0.231" classname="tabulate_gee" name="summarize_gee_logistic_works_as_expected_with_no_covariates_in_the_model">
       <skipped message="Reason: On CRAN ('test-tabulate_gee.R:98:3')"/>
     </testcase>
   </testsuite>
