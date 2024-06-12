@@ -26,7 +26,7 @@ Depends:
     R (>= 4.0),
     tern (>= 0.9.4)
 Imports:
-    checkmate,
+    checkmate (>= 2.1.0),
     emmeans (>= 1.4.5),
     formatters (>= 0.5.6),
     geeasy,
@@ -35,14 +35,19 @@ Imports:
     rtables (>= 0.6.7),
     stats
 Suggests:
-    dplyr,
-    knitr,
-    rmarkdown,
+    dplyr (>= 1.0.9),
+    knitr (>= 1.42),
+    rmarkdown (>= 2.23),
     testthat (>= 3.1),
     vdiffr (>= 1.0.0),
     withr (>= 2.0.0)
 VignetteBuilder:
     knitr
+Config/Needs/verdepcheck: insightsengineering/tern, mllg/checkmate, 
+    rvlenth/emmeans, insightsengineering/formatters, annennenne/geeasy,
+    cran/geepack, cran/nlme, insightsengineering/rtables, 
+    tidyverse/dplyr, yihui/knitr, rstudio/rmarkdown, r-lib/testthat, 
+    r-lib/vdiffr, r-lib/withr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
