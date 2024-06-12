@@ -23,7 +23,7 @@ URL: https://insightsengineering.github.io/tern.gee/,
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
-    tern (>= 0.9.3)
+    tern (>= 0.9.4)
 Imports:
     checkmate,
     emmeans (>= 1.4.5),
