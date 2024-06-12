@@ -27,7 +27,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tern.gee</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9005</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.4</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,14 +45,6 @@
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/tern.gee/v0.1.3">v0.1.3</a> </div></li>
-<!-- end dropdown for versions -->
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-reports">Reports</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-reports">
@@ -86,7 +78,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Introduction to tern.gee</h1>
             
-            <h4 data-toc-skip class="date">2024-04-29</h4>
+            <h4 data-toc-skip class="date">2024-06-12</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/insightsengineering/tern.gee/blob/HEAD/vignettes/tern-gee.Rmd" class="external-link"><code>vignettes/tern-gee.Rmd</code></a></small>
       <div class="d-none name"><code>tern-gee.Rmd</code></div>
@@ -180,8 +172,9 @@ options.</p>
 <span><span class="co">#&gt;   method       from   </span></span>
 <span><span class="co">#&gt;   drop1.geeglm MESS   </span></span>
 <span><span class="co">#&gt;   drop1.geem   MESS   </span></span>
-<span><span class="co">#&gt;   plot.geeglm  geepack</span></span>
-<span><span class="va">fev_fit</span></span>
+<span><span class="co">#&gt;   plot.geeglm  geepack</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fev_fit</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Call:</span></span>
 <span><span class="co">#&gt; geeasy::geelm(formula = formula, id = .id, waves = .waves, data = data, </span></span>
@@ -211,7 +204,7 @@ pertaining to the model such as the estimated coefficients, correlation
 parameters, etc. Additionally, the <code><a href="../reference/lsmeans.html">lsmeans()</a></code> function from
 <code>tern.gee</code> can be used to extract the least squares means
 from any GEE model created using <code><a href="../reference/fit_gee.html">fit_gee()</a></code>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">fev_lsmeans</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/lsmeans.html">lsmeans</a></span><span class="op">(</span><span class="va">fev_fit</span>, data <span class="op">=</span> <span class="va">fev_data</span><span class="op">)</span></span>
 <span><span class="va">fev_lsmeans</span></span>
 <span><span class="co">#&gt;   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n   or_est</span></span>
@@ -233,7 +226,7 @@ contains functionality to summarize the results of a
 <code><a href="../reference/lsmeans.html">lsmeans()</a></code> object in an <code>rtable</code> structure, using
 additional functions from the <a href="https://insightsengineering.github.io/rtables/" class="external-link"><code>rtables</code>
 package</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">fev_counts</span> <span class="op">&lt;-</span> <span class="va">fev_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">USUBJID</span>, <span class="va">ARMCD</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="op">)</span></span>
