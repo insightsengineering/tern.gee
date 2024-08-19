@@ -1,4 +1,8 @@
-# tern.gee 0.1.3.9006
+# tern.gee 0.1.4.9003
+
+# tern.gee 0.1.4
+
+* Change package maintainer to Joe Zhu.
 
 # tern.gee 0.1.3
 
