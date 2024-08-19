@@ -4,6 +4,7 @@
 #' @param conf_level (`proportion`)\cr confidence level
 #' @param weights (`string`)\cr type of weights to be used for the least square means,
 #'   see [emmeans::emmeans()] for details.
+#' @param specs (`string` or `formula`) specifications passed to [emmeans::emmeans()]
 #' @param ... additional arguments for methods
 #'
 #' @return A `data.frame` with least-square means and contrasts. Additional
@@ -21,6 +22,7 @@
 lsmeans <- function(object,
                     conf_level = 0.95,
                     weights = "proportional",
+                    specs = object$vars$arm,
                     ...) {
   UseMethod("lsmeans", object)
 }
@@ -30,8 +32,8 @@ lsmeans <- function(object,
 lsmeans.tern_gee_logistic <- function(object,
                                       conf_level = 0.95,
                                       weights = "proportional",
+                                      specs = object$vars$arm,
                                       ...) {
-  specs <- as.formula(paste("~", object$vars$arm))
   prop_emm <- emmeans::emmeans(
     object = object,
     specs = specs,
@@ -41,7 +43,7 @@ lsmeans.tern_gee_logistic <- function(object,
   )
 
   prop_df <- cbind(
-    data.frame(stats::confint(prop_emm))[, c(object$vars$arm, "prob", "SE", "asymp.LCL", "asymp.UCL")],
+    data.frame(stats::confint(prop_emm))[, c(object$vars$arm, "prob", "SE", "lower.CL", "upper.CL")],
     n = as.list(prop_emm)$extras[, ".wgt."]
   )
   names(prop_df) <- c(object$vars$arm, "prop_est", "prop_est_se", "prop_lower_cl", "prop_upper_cl", "n")
@@ -57,7 +59,7 @@ lsmeans.tern_gee_logistic <- function(object,
   or_df <- or_df[or_df$comparator == ref_level, ]
   or_df <- rbind(NA, or_df)
   or_df[1L, object$vars$arm] <- ref_level
-  or_df <- or_df[, c(object$vars$arm, "odds.ratio", "asymp.LCL", "asymp.UCL")]
+  or_df <- or_df[, c(object$vars$arm, "odds.ratio", "lower.CL", "upper.CL")]
   or_df <- cbind(or_df, log(or_df[, -1L]), conf_level)
   names(or_df) <- c(
     object$vars$arm,
