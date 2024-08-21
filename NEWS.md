@@ -1,4 +1,4 @@
-# tern.gee 0.1.4.9004
+# tern.gee 0.1.4.9005
 
 * Up version `emmeans` package version to 1.10.4.
 
