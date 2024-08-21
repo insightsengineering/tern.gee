@@ -2,8 +2,8 @@ Type: Package
 Package: tern.gee
 Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model
     Fits
-Version: 0.1.4.9003
-Date: 2024-08-06
+Version: 0.1.4.9004
+Date: 2024-08-20
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel@rconis.com", role = "aut"),
     person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut", "cre")),
@@ -24,15 +24,15 @@ URL: https://insightsengineering.github.io/tern.gee/,
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
-    tern (>= 0.9.4)
+    tern (>= 0.9.5)
 Imports:
     checkmate (>= 2.1.0),
     emmeans (>= 1.4.5),
-    formatters (>= 0.5.6),
+    formatters (>= 0.5.8),
     geeasy,
     geepack,
     nlme,
-    rtables (>= 0.6.7),
+    rtables (>= 0.6.9),
     stats
 Suggests:
     dplyr (>= 1.0.9),
@@ -42,7 +42,8 @@ Suggests:
     vdiffr (>= 1.0.0),
     withr (>= 2.0.0)
 VignetteBuilder:
-    knitr
+    knitr,
+    rmarkdown
 Config/Needs/verdepcheck: insightsengineering/tern, mllg/checkmate,
     rvlenth/emmeans, insightsengineering/formatters, annennenne/geeasy,
     cran/geepack, cran/nlme, insightsengineering/rtables, tidyverse/dplyr,
