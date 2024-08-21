@@ -27,7 +27,7 @@ Depends:
     tern (>= 0.9.5)
 Imports:
     checkmate (>= 2.1.0),
-    emmeans (>= 1.4.5),
+    emmeans (>= 1.10.4),
     formatters (>= 0.5.8),
     geeasy,
     geepack,

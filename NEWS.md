@@ -1,5 +1,7 @@
 # tern.gee 0.1.4.9004
 
+* Upversion emmeans version to 1.10.4.
+
 # tern.gee 0.1.4
 
 * Change package maintainer to Joe Zhu.
