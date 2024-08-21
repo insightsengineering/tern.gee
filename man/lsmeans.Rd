@@ -5,9 +5,21 @@
 \alias{lsmeans.tern_gee_logistic}
 \title{Extract Least Square Means from a GEE Model}
 \usage{
-lsmeans(object, conf_level = 0.95, weights = "proportional", ...)
+lsmeans(
+  object,
+  conf_level = 0.95,
+  weights = "proportional",
+  specs = object$vars$arm,
+  ...
+)
 
-\method{lsmeans}{tern_gee_logistic}(object, conf_level = 0.95, weights = "proportional", ...)
+\method{lsmeans}{tern_gee_logistic}(
+  object,
+  conf_level = 0.95,
+  weights = "proportional",
+  specs = object$vars$arm,
+  ...
+)
 }
 \arguments{
 \item{object}{(\code{tern_gee})\cr result of \code{\link[=fit_gee]{fit_gee()}}.}
@@ -16,6 +28,8 @@ lsmeans(object, conf_level = 0.95, weights = "proportional", ...)
 
 \item{weights}{(\code{string})\cr type of weights to be used for the least square means,
 see \code{\link[emmeans:emmeans]{emmeans::emmeans()}} for details.}
+
+\item{specs}{(\code{string} or \code{formula}) specifications passed to \code{\link[emmeans:emmeans]{emmeans::emmeans()}}}
 
 \item{...}{additional arguments for methods}
 }
