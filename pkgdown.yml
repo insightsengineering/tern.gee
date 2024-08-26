@@ -1,10 +1,9 @@
 pandoc: '3.2'
-pkgdown: 2.0.9
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
   tern-gee: tern-gee.html
-last_built: 2024-06-12T08:42Z
+last_built: 2024-08-26T15:41Z
 urls:
   reference: https://insightsengineering.github.io/tern.gee/latest-tag/reference
   article: https://insightsengineering.github.io/tern.gee/latest-tag/articles
-
