@@ -3,7 +3,7 @@ pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
   tern-gee: tern-gee.html
-last_built: 2024-08-21T23:35Z
+last_built: 2024-08-26T08:17Z
 urls:
   reference: https://insightsengineering.github.io/tern.gee/reference
   article: https://insightsengineering.github.io/tern.gee/articles
