@@ -22,22 +22,17 @@
 
 ## Overview
 
-`tern.gee` provides an interface for generalized estimating equations (GEE) within the
-[`tern`](https://insightsengineering.github.io/tern/) framework
-to produce commonly used tables (using [`rtables`](https://insightsengineering.github.io/rtables/) and graphs.
+`tern.gee` provides an interface for generalized estimating equations (GEE) within the [`tern`](https://insightsengineering.github.io/tern/) framework to produce commonly used tables (using [`rtables`](https://insightsengineering.github.io/rtables/) and graphs.
 It builds on the R-package `geepack` for the actual GEE calculations.
 
 ## When to use this package
 
-If you would like to use the [`tern`](https://insightsengineering.github.io/tern/) framework for
-tabulation and graphs, then this package is ideal for your GEE fits.
-However if you use another reporting framework then it will be better to directly use
-`geepack` and perform the tabulation and plots differently.
+If you would like to use the [`tern`](https://insightsengineering.github.io/tern/) framework for tabulation and graphs, then this package is ideal for your GEE fits.
+However if you use another reporting framework then it will be better to directly use `geepack` and perform the tabulation and plots differently.
 
 ## Main Features
 
-* Fitting of GEE models to continuous longitudinal data collected over several time points
-  (called visits) and optionally treatment arms.
+* Fitting of GEE models to continuous longitudinal data collected over several time points (called visits) and optionally treatment arms.
 * Tabulation of least square means per visit and treatment arm.
 * Tabulation of the covariance matrix estimate.
 
@@ -52,11 +47,9 @@ install.packages("tern.gee")
 or you can install the latest development version directly from GitHub by running the following:
 
 ``` r
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("insightsengineering/tern.gee")
+# install.packages("pak")
+pak::pak("insightsengineering/tern.gee")
 ```
-
-Note that it is recommended you [create and use a `GITHUB_PAT`](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) if installing from GitHub.
 
 ## Getting started
 
