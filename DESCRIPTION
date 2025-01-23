@@ -6,7 +6,8 @@ Version: 0.1.5.9004
 Date: 2024-11-01
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel@rconis.com", role = "aut"),
-    person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut", "cre")),
+    person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut", "cre"),
+       comment = c(ORCID = "0000-0001-7566-2787")),
     person("Emily", "de la Rua", , "emily.de_la_rua@contractors.roche.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
@@ -24,15 +25,15 @@ URL: https://insightsengineering.github.io/tern.gee/,
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
-    tern (>= 0.9.5)
+    tern (>= 0.9.7)
 Imports:
     checkmate (>= 2.1.0),
     emmeans (>= 1.10.4),
-    formatters (>= 0.5.9),
+    formatters (>= 0.5.10),
     geeasy,
     geepack,
     nlme,
-    rtables (>= 0.6.9),
+    rtables (>= 0.6.11),
     stats
 Suggests:
     dplyr (>= 1.0.9),
