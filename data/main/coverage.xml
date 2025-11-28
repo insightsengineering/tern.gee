@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.902439024390244" branch-rate="0" lines-covered="185" lines-valid="205" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-03-13 22:18:59.194671">
+<coverage line-rate="0.901960784313726" branch-rate="0" lines-covered="184" lines-valid="204" branches-covered="0" branches-valid="0" complexity="0" version="3.6.5" timestamp="2025-11-28 14:50:28.522103">
   <sources>
     <source>/__w/tern.gee/tern.gee/tern.gee</source>
   </sources>
   <packages>
-    <package name="tern.gee" line-rate="0.902439024390244" branch-rate="0" complexity="0">
+    <package name="tern.gee" line-rate="0.901960784313726" branch-rate="0" complexity="0">
       <classes>
         <class name="fit_gee.R" filename="R/fit_gee.R" line-rate="1" branch-rate="0" complexity="0">
           <methods>
@@ -83,7 +83,6 @@
                 <line number="103" hits="1" branch="false"/>
                 <line number="104" hits="1" branch="false"/>
                 <line number="105" hits="1" branch="false"/>
-                <line number="106" hits="14" branch="false"/>
                 <line number="107" hits="14" branch="false"/>
                 <line number="108" hits="14" branch="false"/>
                 <line number="110" hits="14" branch="false"/>
@@ -181,7 +180,6 @@
             <line number="103" hits="1" branch="false"/>
             <line number="104" hits="1" branch="false"/>
             <line number="105" hits="1" branch="false"/>
-            <line number="106" hits="14" branch="false"/>
             <line number="107" hits="14" branch="false"/>
             <line number="108" hits="14" branch="false"/>
             <line number="110" hits="14" branch="false"/>
