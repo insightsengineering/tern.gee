@@ -25,15 +25,15 @@ URL: https://insightsengineering.github.io/tern.gee/,
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
-    tern (>= 0.9.7)
+    tern (>= 0.9.9)
 Imports:
     checkmate (>= 2.1.0),
     emmeans (>= 1.10.4),
-    formatters (>= 0.5.10),
+    formatters (>= 0.5.11),
     geeasy,
     geepack,
     nlme,
-    rtables (>= 0.6.11),
+    rtables (>= 0.6.13),
     stats
 Suggests:
     dplyr (>= 1.0.9),
@@ -55,4 +55,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
