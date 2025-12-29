@@ -25,20 +25,20 @@ URL: https://insightsengineering.github.io/tern.gee/,
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
     R (>= 4.0),
-    tern (>= 0.9.9)
+    tern (>= 0.9.10)
 Imports:
     checkmate (>= 2.1.0),
     emmeans (>= 1.10.4),
-    formatters (>= 0.5.11),
+    formatters (>= 0.5.12),
     geeasy,
     geepack,
     nlme,
-    rtables (>= 0.6.13),
+    rtables (>= 0.6.15),
     stats
 Suggests:
     dplyr (>= 1.0.9),
     knitr (>= 1.42),
-    rmarkdown (>= 2.23),
+    rmarkdown (>= 2.28),
     testthat (>= 3.1),
     vdiffr (>= 1.0.7),
     withr (>= 2.0.0)
