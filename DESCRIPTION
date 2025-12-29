@@ -24,7 +24,7 @@ URL: https://insightsengineering.github.io/tern.gee/,
     https://github.com/insightsengineering/tern.gee/
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
-    R (>= 4.0),
+    R (>= 4.4.0),
     tern (>= 0.9.10)
 Imports:
     checkmate (>= 2.1.0),
