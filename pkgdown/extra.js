@@ -14,7 +14,7 @@
   "use strict";
 
   // Versions that have a validation report. Order does not matter.
-  var REPORTS = ["0.1.15"];
+  var REPORTS = ["0.1.5"];
   var REPORT_BASE =
     "https://pharmar.github.io/pharmapkgs/src/contrib/Meta/validation_report_tern.gee_v";
 
