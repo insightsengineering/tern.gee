@@ -1,4 +1,6 @@
-# tern.gee 0.1.5.9009
+# tern.gee 0.1.6
+
+# Up version `rtables` package version to 0.6.17.
 
 # tern.gee 0.1.5
 

@@ -18,6 +18,8 @@ navbar:
         href: unit-test-report/
       - text: Non-CRAN unit test report
         href: unit-test-report-non-cran/
+      - text: Validation report
+        href: https://pharmar.github.io/pharmapkgs/src/contrib/Meta/validation_report_tern.gee_v0.1.5.html
     github:
       icon: fa-github
       href: https://github.com/insightsengineering/tern.gee

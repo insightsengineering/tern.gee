@@ -120,13 +120,13 @@ functionality to summarize the results of a `lsmeans()` object in an
 package](https://insightsengineering.github.io/rtables/).
 
 ```{r}
-fev_counts <- fev_data %>%
-  dplyr::select(USUBJID, ARMCD) %>%
+fev_counts <- fev_data |>
+  dplyr::select(USUBJID, ARMCD) |>
   unique()
 
-fev_gee_table <- basic_table(show_colcounts = TRUE) %>%
-  split_cols_by("ARMCD", ref_group = "PBO") %>%
-  summarize_gee_logistic() %>%
+fev_gee_table <- basic_table(show_colcounts = TRUE) |>
+  split_cols_by("ARMCD", ref_group = "PBO") |>
+  summarize_gee_logistic() |>
   build_table(fev_lsmeans, alt_counts_df = fev_counts)
 
 fev_gee_table

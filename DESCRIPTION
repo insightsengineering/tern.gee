@@ -2,8 +2,8 @@ Type: Package
 Package: tern.gee
 Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model
     Fits
-Version: 0.1.5.9009
-Date: 2025-11-28
+Version: 0.1.6
+Date: 2026-10-01
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel@rconis.com", role = "aut"),
     person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut", "cre"),
@@ -24,21 +24,22 @@ URL: https://insightsengineering.github.io/tern.gee/,
     https://github.com/insightsengineering/tern.gee/
 BugReports: https://github.com/insightsengineering/tern.gee/issues
 Depends:
-    R (>= 4.0),
-    tern (>= 0.9.9)
+    R (>= 4.4.0),
+    tern (>= 0.9.10)
 Imports:
     checkmate (>= 2.1.0),
     emmeans (>= 1.10.4),
-    formatters (>= 0.5.11),
+    formatters (>= 0.5.12),
     geeasy,
     geepack,
     nlme,
-    rtables (>= 0.6.13),
+    rtables (>= 0.6.17),
     stats
 Suggests:
     dplyr (>= 1.0.9),
     knitr (>= 1.42),
-    rmarkdown (>= 2.23),
+    Rcpp (>= 1.1.0),
+    rmarkdown (>= 2.28),
     testthat (>= 3.1),
     vdiffr (>= 1.0.7),
     withr (>= 2.0.0)
@@ -55,4 +56,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.1.0
