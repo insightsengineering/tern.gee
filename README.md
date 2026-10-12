@@ -22,7 +22,7 @@
 
 ## Overview
 
-`tern.gee` provides an interface for generalized estimating equations (GEE) within the [`tern`](https://insightsengineering.github.io/tern/) framework to produce commonly used tables (using [`rtables`](https://insightsengineering.github.io/rtables/) and graphs.
+`tern.gee` provides an interface for generalized estimating equations (GEE) within the [`tern`](https://insightsengineering.github.io/tern/) framework to produce commonly used tables (using [`rtables`](https://pharmaverse.github.io/rtables/) and graphs.
 It builds on the R-package `geepack` for the actual GEE calculations.
 
 ## When to use this package
