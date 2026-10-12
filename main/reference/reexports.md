@@ -5,4 +5,4 @@ to see their documentation.
 
 - tern:
 
-  [`as.rtable`](https://insightsengineering.github.io/tern/latest-tag/reference/as.rtable.html)
+  [`as.rtable()`](https://pharmaverse.github.io/tern/latest-tag/reference/as.rtable.html)

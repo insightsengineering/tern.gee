@@ -18,27 +18,27 @@ vars_gee(
 
 - response:
 
-  (`character`)  
+  (`character`)\
   name of response variable.
 
 - covariates:
 
-  (`character`)  
+  (`character`)\
   vector of names of variables to use as covariates.
 
 - id:
 
-  (`character`)  
+  (`character`)\
   name of variable to use to identify unique IDs.
 
 - arm:
 
-  (`character`)  
+  (`character`)\
   name of arm variable.
 
 - visit:
 
-  (`character`)  
+  (`character`)\
   name of visit variable.
 
 ## Value

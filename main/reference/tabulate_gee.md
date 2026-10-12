@@ -28,12 +28,12 @@ summarize_gee_logistic(
 
 - x:
 
-  (`data.frame`)  
+  (`data.frame`)\
   the object which should be converted to an `rtable`.
 
 - type:
 
-  (`character`)  
+  (`character`)\
   type of table to extract from `tern_gee` object.
 
 - ...:
@@ -42,51 +42,51 @@ summarize_gee_logistic(
 
 - df:
 
-  (`data.frame`)  
+  (`data.frame`)\
   data set resulting from
   [`lsmeans()`](https://insightsengineering.github.io/tern.gee/reference/lsmeans.md).
 
 - .in_ref_col:
 
-  (`logical`)  
+  (`logical`)\
   `TRUE` when working with the reference level, `FALSE` otherwise.
 
 - lyt:
 
-  (`layout`)  
+  (`layout`)\
   input layout where analyses will be added to.
 
 - table_names:
 
-  (`character`)  
+  (`character`)\
   this can be customized in case that the same `vars` are analyzed
   multiple times, to avoid warnings from `rtables`.
 
 - .stats:
 
-  (`character`)  
+  (`character`)\
   statistics to select for the table.
 
 - .formats:
 
-  (named `character` or `list`)  
+  (named `character` or `list`)\
   formats for the statistics.
 
 - .indent_mods:
 
-  (named `integer`)  
+  (named `integer`)\
   indent modifiers for the labels.
 
 - .labels:
 
-  (named `character`)  
+  (named `character`)\
   labels for the statistics (without indent).
 
 ## Value
 
 The functions have different purposes:
 
-- [`as.rtable()`](https://insightsengineering.github.io/tern/latest-tag/reference/as.rtable.html)
+- [`as.rtable()`](https://pharmaverse.github.io/tern/latest-tag/reference/as.rtable.html)
   returns either the coefficient table or the covariance matrix as an
   `rtables` object.
 

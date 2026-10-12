@@ -16,14 +16,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/insightsengineering/tern.gee/blob/main/DESCRIPTION)
 
-Sabanés Bové D, Zhu J, de la Rua E (2025). *tern.gee: Tables and Graphs
+Sabanés Bové D, Zhu J, de la Rua E (2026). *tern.gee: Tables and Graphs
 for Generalized Estimating Equations (GEE) Model Fits*. R package
-version 0.1.5.9009, <https://insightsengineering.github.io/tern.gee/>.
+version 0.1.6.9000, <https://insightsengineering.github.io/tern.gee/>.
 
-    @Manual{,
-      title = {tern.gee: Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits},
-      author = {Daniel {Sabanés Bové} and Joe Zhu and Emily {de la Rua}},
-      year = {2025},
-      note = {R package version 0.1.5.9009},
-      url = {https://insightsengineering.github.io/tern.gee/},
-    }
+@Manual{,\
+  title = {tern.gee: Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits},\
+  author = {Daniel {Sabanés Bové} and Joe Zhu and Emily {de la Rua}},\
+  year = {2026},\
+  note = {R package version 0.1.6.9000},\
+  url = {https://insightsengineering.github.io/tern.gee/},\
+}

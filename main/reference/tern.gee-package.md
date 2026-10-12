@@ -20,6 +20,9 @@ Useful links:
 
 Authors:
 
+- Joe Zhu <joe.zhu@roche.com>
+  ([ORCID](https://orcid.org/0000-0001-7566-2787))
+
 - Daniel Sabanés Bové <daniel@rconis.com>
 
 - Emily de la Rua <emily.de_la_rua@contractors.roche.com>

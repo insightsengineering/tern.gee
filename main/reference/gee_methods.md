@@ -17,7 +17,7 @@ QIC(object, ...)
 
 - x:
 
-  (`tern_gee`)  
+  (`tern_gee`)\
   result of
   [`fit_gee()`](https://insightsengineering.github.io/tern.gee/reference/fit_gee.md).
 
@@ -34,7 +34,7 @@ QIC(object, ...)
 
 - object:
 
-  (`tern_gee`)  
+  (`tern_gee`)\
   result of
   [`fit_gee()`](https://insightsengineering.github.io/tern.gee/reference/fit_gee.md).
 

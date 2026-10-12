@@ -38,8 +38,8 @@ Issues](https://img.shields.io/github/issues-raw/insightsengineering/tern.gee?co
 `tern.gee` provides an interface for generalized estimating equations
 (GEE) within the [`tern`](https://insightsengineering.github.io/tern/)
 framework to produce commonly used tables (using
-[`rtables`](https://insightsengineering.github.io/rtables/) and graphs.
-It builds on the R-package `geepack` for the actual GEE calculations.
+[`rtables`](https://pharmaverse.github.io/rtables/) and graphs. It
+builds on the R-package `geepack` for the actual GEE calculations.
 
 ## When to use this package
 
@@ -61,48 +61,45 @@ directly use `geepack` and perform the tabulation and plots differently.
 `tern.gee` is available on CRAN and you can install the latest released
 version with:
 
-``` r
-install.packages("tern.gee")
-```
+\
+[`install.packages`](https://rdrr.io/r/utils/install.packages.html)`(``"tern.gee"``)`
 
 or you can install the latest development version directly from GitHub
 by running the following:
 
-``` r
-# install.packages("pak")
-pak::pak("insightsengineering/tern.gee")
-```
+\
+`# install.packages("pak")`\
+`pak``::`[`pak`](https://pak.r-lib.org/reference/pak.html)`(``"insightsengineering/tern.gee"``)`
 
 ## Getting started
 
 You can get started by trying out the example:
 
-``` r
-library(tern.gee)
-
-fev_data$FEV1_BINARY <- as.integer(fev_data$FEV1 > 30)
-fev_counts <- fev_data %>%
-  dplyr::select(USUBJID, ARMCD) %>%
-  unique()
-
-gee_fit <- fit_gee(
-  vars = list(
-    response = "FEV1_BINARY",
-    covariates = c("RACE", "SEX"),
-    arm = "ARMCD",
-    id = "USUBJID",
-    visit = "AVISIT"
-  ),
-  data = fev_data
-)
-
-lsmeans_df <- lsmeans(gee_fit, data = fev_data)
-
-basic_table(show_colcounts = TRUE) %>%
-  split_cols_by("ARMCD", ref_group = "PBO") %>%
-  summarize_gee_logistic() %>%
-  build_table(lsmeans_df, alt_counts_df = fev_counts)
-```
+\
+[`library`](https://rdrr.io/r/base/library.html)`(`[`tern.gee`](https://insightsengineering.github.io/tern.gee/)`)`\
+\
+`fev_data``$``FEV1_BINARY`` ``<-`` `[`as.integer`](https://rdrr.io/r/base/integer.html)`(``fev_data``$``FEV1`` ``>`` ``30``)`\
+`fev_counts`` ``<-`` ``fev_data`` ``%>%`\
+`  ``dplyr``::`[`select`](https://dplyr.tidyverse.org/reference/select.html)`(``USUBJID``, ``ARMCD``)`` ``%>%`\
+`  `[`unique`](https://rdrr.io/r/base/unique.html)`(``)`\
+\
+`gee_fit`` ``<-`` `[`fit_gee`](https://insightsengineering.github.io/tern.gee/reference/fit_gee.md)`(`\
+`  vars ``=`` `[`list`](https://rdrr.io/r/base/list.html)`(`\
+`    response ``=`` ``"FEV1_BINARY"``,`\
+`    covariates ``=`` `[`c`](https://rdrr.io/r/base/c.html)`(``"RACE"``, ``"SEX"``)``,`\
+`    arm ``=`` ``"ARMCD"``,`\
+`    id ``=`` ``"USUBJID"``,`\
+`    visit ``=`` ``"AVISIT"`\
+`  ``)``,`\
+`  data ``=`` ``fev_data`\
+`)`\
+\
+`lsmeans_df`` ``<-`` `[`lsmeans`](https://insightsengineering.github.io/tern.gee/reference/lsmeans.md)`(``gee_fit``, data ``=`` ``fev_data``)`\
+\
+`basic_table``(``show_colcounts ``=`` ``TRUE``)`` ``%>%`\
+`  ``split_cols_by``(``"ARMCD"``, ref_group ``=`` ``"PBO"``)`` ``%>%`\
+`  `[`summarize_gee_logistic`](https://insightsengineering.github.io/tern.gee/reference/tabulate_gee.md)`(``)`` ``%>%`\
+`  ``build_table``(``lsmeans_df``, alt_counts_df ``=`` ``fev_counts``)`
 
 This specifies a GEE with the `FEV1_BINARY` outcome and the `RACE` and
 `SEX` covariates for subjects identified by `USUBJID` and treatment arm

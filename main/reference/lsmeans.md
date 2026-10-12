@@ -27,18 +27,18 @@ lsmeans(
 
 - object:
 
-  (`tern_gee`)  
+  (`tern_gee`)\
   result of
   [`fit_gee()`](https://insightsengineering.github.io/tern.gee/reference/fit_gee.md).
 
 - conf_level:
 
-  (`proportion`)  
+  (`proportion`)\
   confidence level
 
 - weights:
 
-  (`string`)  
+  (`string`)\
   type of weights to be used for the least square means, see
   [`emmeans::emmeans()`](https://rvlenth.github.io/emmeans/reference/emmeans.html)
   for details.
@@ -65,18 +65,24 @@ df$AVAL <- rbinom(n = nrow(df), size = 1, prob = 0.5)
 fit <- fit_gee(vars = vars_gee(arm = "ARMCD"), data = df)
 
 lsmeans(fit)
-#>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n   or_est
-#> 1   PBO 0.5202839  0.02106086     0.4788982     0.5613931 420       NA
-#> 2   TRT 0.5414730  0.02440801     0.4933255     0.5888583 380 1.088819
-#>   or_lower_cl or_upper_cl log_or_est log_or_lower_cl log_or_upper_cl conf_level
-#> 1          NA          NA         NA              NA              NA       0.95
-#> 2   0.8443247    1.404113 0.08509393      -0.1692181        0.339406       0.95
+#>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n    or_est
+#> 1   PBO 0.5349901  0.02202202     0.4916075     0.5778497 420        NA
+#> 2   TRT 0.5254463  0.02338787     0.4794517     0.5710132 380 0.9624085
+#>   or_lower_cl or_upper_cl  log_or_est log_or_lower_cl log_or_upper_cl
+#> 1          NA          NA          NA              NA              NA
+#> 2   0.7471582    1.239671 -0.03831627      -0.2914784       0.2148458
+#>   conf_level
+#> 1       0.95
+#> 2       0.95
 
 lsmeans(fit, conf_level = 0.90, weights = "equal")
-#>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n   or_est
-#> 1   PBO 0.5202839  0.02106086     0.4788982     0.5613931 420       NA
-#> 2   TRT 0.5414730  0.02440801     0.4933255     0.5888583 380 1.088819
-#>   or_lower_cl or_upper_cl log_or_est log_or_lower_cl log_or_upper_cl conf_level
-#> 1          NA          NA         NA              NA              NA        0.9
-#> 2   0.8796287    1.347759 0.08509393      -0.1282554       0.2984433        0.9
+#>   ARMCD  prop_est prop_est_se prop_lower_cl prop_upper_cl   n    or_est
+#> 1   PBO 0.5349901  0.02202202     0.4916075     0.5778497 420        NA
+#> 2   TRT 0.5254463  0.02338787     0.4794517     0.5710132 380 0.9624085
+#>   or_lower_cl or_upper_cl  log_or_est log_or_lower_cl log_or_upper_cl
+#> 1          NA          NA          NA              NA              NA
+#> 2   0.7782551    1.190137 -0.03831627      -0.2507009       0.1740684
+#>   conf_level
+#> 1        0.9
+#> 2        0.9
 ```

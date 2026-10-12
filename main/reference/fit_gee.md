@@ -17,23 +17,23 @@ fit_gee(
 
 - vars:
 
-  (`list`)  
+  (`list`)\
   see
   [`vars_gee()`](https://insightsengineering.github.io/tern.gee/reference/vars_gee.md).
 
 - data:
 
-  (`data.frame`)  
+  (`data.frame`)\
   input data.
 
 - regression:
 
-  (`string`)  
+  (`string`)\
   choice of regression model.
 
 - cor_struct:
 
-  (`string`)  
+  (`string`)\
   assumed correlation structure.
 
 ## Value
