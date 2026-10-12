@@ -2,8 +2,8 @@ Type: Package
 Package: tern.gee
 Title: Tables and Graphs for Generalized Estimating Equations (GEE) Model
     Fits
-Version: 0.1.6
-Date: 2026-10-01
+Version: 0.1.6.9000
+Date: 2026-10-12
 Authors@R: c(
     person("Daniel", "Sabanés Bové", , "daniel@rconis.com", role = "aut"),
     person("Joe", "Zhu", , "joe.zhu@roche.com", role = c("aut", "cre"),
@@ -51,9 +51,9 @@ Config/Needs/verdepcheck: insightsengineering/tern, mllg/checkmate,
     cran/geepack, cran/nlme, insightsengineering/rtables, tidyverse/dplyr,
     yihui/knitr, rstudio/rmarkdown, r-lib/testthat, r-lib/vdiffr,
     r-lib/withr
+Config/roxygen2/version: 8.1.0
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-Config/roxygen2/version: 8.1.0
