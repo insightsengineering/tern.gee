@@ -13,7 +13,7 @@ repos:
           - checkmate
           - emmeans
           - formatters
-          - geeasy
+          - Matrix
           - geepack
           - nlme
           - rtables

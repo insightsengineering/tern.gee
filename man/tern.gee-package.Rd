@@ -30,6 +30,11 @@ Authors:
 Other contributors:
 \itemize{
   \item F. Hoffmann-La Roche AG [copyright holder, funder]
+  \item Anne Helby Petersen (Author of the 'geeasy' code adapted in R/geelm.R) [contributor, copyright holder]
+  \item Lee McDaniel (Author of the 'geeM' code adapted in R/geelm.R) [contributor, copyright holder]
+  \item Nick Henderson (Author of the 'geeM' code adapted in R/geelm.R) [contributor, copyright holder]
+  \item Melanie Prague (Contributed weighting code to 'geeM') [contributor]
+  \item Søren Højsgaard (Author of the 'geeasy' code adapted in R/geelm.R) [contributor, copyright holder]
 }
 
 }

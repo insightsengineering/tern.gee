@@ -38,7 +38,8 @@ by random effects in the model.
 This vignette shows the general purpose and syntax of the `tern.gee` R
 package which provides an interface for GEEs within the `tern`
 framework. This package builds upon some of the GEE functionality
-included in the `geepack` and `geeasy` R packages. Within this package,
+included in the `geepack` R package and adapts the GEE fitting engine
+from the `geeasy` package. Within this package,
 we have implemented GEEs in R in such a way that they can easily be
 embedded into a `shiny` application. See
 `teal.modules.clinical::tm_a_gee()` and the [`teal.modules.clinical`

@@ -11,13 +11,18 @@ export(lsmeans)
 export(s_lsmeans_logistic)
 export(summarize_gee_logistic)
 export(vars_gee)
+import(Matrix)
 import(checkmate)
 import(rtables)
 importFrom(emmeans,emmeans)
 importFrom(geepack,QIC)
 importFrom(nlme,VarCorr)
 importFrom(rtables,add_colcounts)
-importFrom(stats,acf)
-importFrom(stats,as.formula)
-importFrom(tern,as.rtable)
-importFrom(tern,f_conf_level)
+importFrom(stats,
+  acf,
+  as.formula
+)
+importFrom(tern,
+  as.rtable,
+  f_conf_level
+)

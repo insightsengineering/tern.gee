@@ -1,5 +1,8 @@
 # tern.gee 0.1.6.9000
 
+* Removed the dependency on `geeasy`. The GEE fitting engine needed by `fit_gee()` (adapted from
+  `geeasy` and `geeM`) is now part of `tern.gee`, with `Matrix` as a new dependency.
+* Changed the package license to GPL-3, as required by the adapted `geeasy` / `geeM` code.
 # Up version `rtables` package version to 0.6.17.
 
 # tern.gee 0.1.5

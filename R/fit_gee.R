@@ -62,7 +62,7 @@ build_family <- function(regression) {
   list(
     object = result_object,
     class = result_class,
-    control = geeasy::geelm.control(scale.fix = TRUE)
+    control = geelm_control(scale.fix = TRUE)
   )
 }
 
@@ -154,7 +154,7 @@ fit_gee <- function(vars = vars_gee(),
   cor_struct <- match.arg(cor_struct)
   cor_details <- build_cor_details(cor_struct, vars, data)
 
-  fit <- geeasy::geelm(
+  fit <- geelm(
     formula = formula,
     id = .id,
     waves = .waves,
