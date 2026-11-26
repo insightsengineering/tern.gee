@@ -22,12 +22,12 @@
 
 ## Overview
 
-`tern.gee` provides an interface for generalized estimating equations (GEE) within the [`tern`](https://insightsengineering.github.io/tern/) framework to produce commonly used tables (using [`rtables`](https://pharmaverse.github.io/rtables/) and graphs.
+`tern.gee` provides an interface for generalized estimating equations (GEE) within the [`tern`](https://pharmaverse.github.io/tern/) framework to produce commonly used tables (using [`rtables`](https://pharmaverse.github.io/rtables/) and graphs.
 It builds on the R-package `geepack` for the actual GEE calculations.
 
 ## When to use this package
 
-If you would like to use the [`tern`](https://insightsengineering.github.io/tern/) framework for tabulation and graphs, then this package is ideal for your GEE fits.
+If you would like to use the [`tern`](https://pharmaverse.github.io/tern/) framework for tabulation and graphs, then this package is ideal for your GEE fits.
 However if you use another reporting framework then it will be better to directly use `geepack` and perform the tabulation and plots differently.
 
 ## Main Features
@@ -87,12 +87,5 @@ This specifies a GEE with the `FEV1_BINARY` outcome and the `RACE` and `SEX` cov
 For more information on how GEE models and their `rtables` tables are created see [the introduction vignette](https://insightsengineering.github.io/tern.gee/main/articles/tern-gee.html).
 
 ## Stargazers
-
-### Current
-
-[![Stargazers repo roster for @insightsengineering/tern.gee](https://reporoster.com/stars/insightsengineering/tern.gee)](https://github.com/insightsengineering/tern.gee/stargazers)
-[![Forkers repo roster for @insightsengineering/tern.gee](https://reporoster.com/forks/insightsengineering/tern.gee)](https://github.com/insightsengineering/tern.gee/network/members)
-
-### Over time
 
 [![Stargazers over time](https://starchart.cc/insightsengineering/tern.gee.svg)](https://starchart.cc/insightsengineering/tern.gee)
