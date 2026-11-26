@@ -100,8 +100,6 @@ geelm <- function(formula, id, waves, data,
   if (is.null(formulaoffset)) formulaoffset <- rep(0, nn)
   dat$offset <- formulaoffset
 
-  prior.weights <- dat$weights
-
   # Sort data by id and waves.
   neworder <- order(dat$id, dat$waves)
   dat <- dat[neworder, ]
@@ -195,7 +193,7 @@ geelm <- function(formula, id, waves, data,
     family = famret,
     linear.predictors = results$eta[oldorder_noNA],
     weights = results$weights[oldorder_noNA],
-    prior.weights = prior.weights,
+    prior.weights = dat$weights[oldorder_noNA],
     df.residual = sum(results$weights != 0) - model_rank,
     y = Y[oldorder_noNA],
     model = dat[oldorder_noNA, ],
@@ -575,12 +573,10 @@ get_sandwich <- function(YY, XX, eta, id, R.alpha.inv, phi, InvLinkDeriv,
   list(sandvar = sandvar, numsand = numsand)
 }
 
-# Block diagonal matrix with one block per cluster (filled with ones by default).
-get_block_diag <- function(len, xvec = NULL) {
+# Block diagonal matrix of ones with one block per cluster.
+get_block_diag <- function(len) {
   K <- length(len)
-  if (is.null(xvec)) {
-    xvec <- rep.int(1, sum(len^2))
-  }
+  xvec <- rep.int(1, sum(len^2))
   row.vec <- col.vec <- vector("numeric", sum(len^2))
   add.vec <- cumsum(len) - len
   if (K == 1) {
@@ -593,10 +589,6 @@ get_block_diag <- function(len, xvec = NULL) {
     col.vec[(index[i] + 1):(index[i + 1])] <- rep((1:len[i]) + add.vec[i], each = len[i])
   }
   BlockDiag <- sparseMatrix(i = row.vec, j = col.vec, x = xvec)
-  testsymm <- abs(sum(skewpart(BlockDiag)))
-  if (testsymm != 0) {
-    warning("Correlation matrix is not computed to be exactly symmetric. Taking only the symmetric part.")
-  }
   list(BDiag = symmpart(BlockDiag), row.vec = row.vec, col.vec = col.vec)
 }
 

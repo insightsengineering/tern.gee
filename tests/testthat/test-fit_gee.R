@@ -112,3 +112,11 @@ test_that("fit_gee works as expected for Toeplitz correlation structure", {
   ))
   expect_class(result, c("tern_gee_logistic", "tern_gee", "geelm"))
 })
+
+test_that("summary works for fit_gee results with missing responses", {
+  expect_true(anyNA(fev_data$FEV1_BINARY))
+  result <- fit_gee(vars = fev_vars, data = fev_data)
+  coefs <- withr::with_options(opts_partial_match_old, stats::coef(summary(result)))
+  expect_data_frame(coefs, nrows = 4L)
+  expect_equal(coefs$Estimate, unname(stats::coef(result)))
+})
