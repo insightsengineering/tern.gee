@@ -10,6 +10,7 @@
 #' @importFrom stats acf as.formula
 #' @importFrom tern f_conf_level
 #' @importFrom emmeans emmeans
+#' @import Matrix
 NULL
 
 # to avoid NOTEs from R CMD CHECK
