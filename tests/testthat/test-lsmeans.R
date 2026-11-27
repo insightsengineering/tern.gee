@@ -16,3 +16,20 @@ test_that("lsmeans works for logistic model", {
   ))
   expect_identical(nrow(result), 2L)
 })
+
+test_that("lsmeans uses conf_level for the proportion confidence intervals", {
+  model <- fit_gee(
+    vars = fev_vars,
+    data = fev_data,
+    regression = "logistic",
+    cor_struct = "unstructured"
+  )
+
+  result <- lsmeans(model, conf_level = 0.8)
+  expected <- as.data.frame(stats::confint(
+    emmeans::emmeans(model, specs = "ARMCD", weights = "proportional", type = "response", data = model$data),
+    level = 0.8
+  ))
+  expect_equal(result$prop_lower_cl, expected$lower.CL)
+  expect_equal(result$prop_upper_cl, expected$upper.CL)
+})
